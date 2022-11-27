@@ -1,5 +1,38 @@
+body {
+    font-family: Helvetica;
+    font-size: 15px;
+}
+
+
 #content {
-    margin-top: 15px;
-    float: left;
+    margin: auto;
     width: 500px;
 }
+
+#content p, #content ul {
+    color: #333;
+    line-height: 18px;
+}
+
+#content sup.note {
+    display: inline-block;
+    margin-top: -5px;
+}
+
+#content p.notop {
+    margin-top: 0;
+}
+
+#content p.nobottom {
+    margin-bottom: 0;
+}
+
+
+#content li {
+    margin-bottom: 0.7em;
+}
+
+.post + .post {
+    margin-top: 50px;
+}
+
