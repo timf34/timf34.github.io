@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <title>The Gallery</title>
     <link rel="stylesheet" href="gallery_style.css" />
+    <script src="./art.js"></script>
 </head>
 
 <body>
-<div class="container">
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="" id="modal-image" alt=""/>
+    </div>
+</div>
+
+<div class="gallery-container">
     <figure>
-        <img src="https://images.metmuseum.org/CRDImages/ep/original/DT4626.jpg" alt="Two Men Contemplating the Moon" width="500">
+        <img src="https://images.metmuseum.org/CRDImages/ep/original/DT4626.jpg" alt="Two Men Contemplating the Moon" onclick=galleryFunction1(this) width="500">
         <figcaption><em>Two Men Contemplating the Moon</em> by Caspar David Friedrich</figcaption>
     </figure>
     <figure class="landscape">
