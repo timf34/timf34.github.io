@@ -1,20 +1,18 @@
-// TODO: when I come back, create a list of all the iamges, and then when any of the images is clicked on, we can
+// TODO: when I come back, create a list of all the images, and then when any of the images is clicked on, we can
 //  enlarge it using a modal. Also finish copying in the code from the example. I might also want to set the modal
 //  to a certain size so that its not too large.
 
 
-let imageBox1 = document.getElementById("imageBox1");
-
 // Get the modal image tag
-var modal = document.getElementById("myModal");
+let modal = document.getElementById("myModal");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
-var modalImage = document.getElementById("modal-image");
+let modalImage = document.getElementById("modal-image");
 
 // When the user clicks the big picture, set the image and open the modal
-imageBox1.onclick = function (e) {
+modal.onclick = function (e) {
     var src = e.srcElement.src;
     modal.style.display = "block";
     modalImage.src = src;
@@ -34,7 +32,8 @@ window.onclick = function (event) {
 
 // TODO: note this -> Ok so there's something slightly werid with permisions where in... I need to have the modal and modalImage vars inside here
 function galleryFunction1(smallImg) {
-    var src = smallImg.src;
+    // TODO: yeah so the issue is that these vars have to be defined within this function...
+    let src = smallImg.src;
     var modal = document.getElementById("myModal");
     var modalImage = document.getElementById("modal-image");
     console.log(src)
