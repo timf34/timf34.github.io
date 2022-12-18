@@ -54,6 +54,8 @@ figcaption {
 
 .gallery-container img:hover {
     opacity: 0.5;
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(134, 29, 146, 0.78);
     /* Make cursor change to hand when hovering over image which has onclick attribute */
     /* It must have onclick attribute to work */
     cursor: pointer;
