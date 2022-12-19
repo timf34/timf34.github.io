@@ -7,21 +7,26 @@
 let modal = document.getElementById("myModal");
 
 // Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
+// window.onload = function(){
+//     let span = document.getElementsByClassName("close")[0];
+// }
 
 let modalImage = document.getElementById("modal-image");
 
-// When the user clicks the big picture, set the image and open the modal
-modal.onclick = function (e) {
-    var src = e.srcElement.src;
-    modal.style.display = "block";
-    modalImage.src = src;
-};
+// // When the user clicks the big picture, set the image and open the modal
+// modal.onclick = function (e) {
+//     var src = e.srcElement.src;
+//     modal.style.display = "block";
+//     modalImage.src = src;
+// };
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none";
-};
+window.onload = function(){
+    span.onclick = function () {
+        modal.style.display = "none";
+        cosole.log("clicked")
+    };
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
@@ -39,5 +44,12 @@ function galleryFunction1(smallImg) {
     console.log(src)
     modal.style.display = "block";
     modalImage.src = src;
-    console.log("yolo bitches")
 }
+
+// Add a function to close the modal when the user clicks on the span element (the x)
+function closeFunction() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
+
+
