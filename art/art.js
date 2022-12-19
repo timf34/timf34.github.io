@@ -1,55 +1,49 @@
-// TODO: when I come back, create a list of all the images, and then when any of the images is clicked on, we can
-//  enlarge it using a modal. Also finish copying in the code from the example. I might also want to set the modal
-//  to a certain size so that its not too large.
+// Wait for DOM to Load
+function OnLoad() {
+    // Get DOM Elements
+    const modal = document.getElementById("my-modal");
+    const modalImage = document.getElementById("modal-image");
+    // Get this element `<span class="close-btn">&times;</span>`
+    const closeBtn = document.getElementsByClassName("close-btn")[0];
+
+    console.log(closeBtn);
+    console.log(modalImage);
+    console.log(modal);
+
+    // Events
+    closeBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', outsideClick);
+
+    // Reference to the figure elements
+    var figures = document.querySelectorAll("figure");
 
 
-// Get the modal image tag
-let modal = document.getElementById("myModal");
-
-// Get the <span> element that closes the modal
-// window.onload = function(){
-//     let span = document.getElementsByClassName("close")[0];
-// }
-
-let modalImage = document.getElementById("modal-image");
-
-// // When the user clicks the big picture, set the image and open the modal
-// modal.onclick = function (e) {
-//     var src = e.srcElement.src;
-//     modal.style.display = "block";
-//     modalImage.src = src;
-// };
-
-// When the user clicks on <span> (x), close the modal
-window.onload = function(){
-    span.onclick = function () {
-        modal.style.display = "none";
-        cosole.log("clicked")
-    };
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    // Bind a click event listener to each image element
+    for (var i = 0; i < figures.length; i++) {
+        figures[i].addEventListener("click", function (event) {
+            console.log(event.target);
+            console.log(event.target.src);
+            // Set the src attribute of the enlarged image element to the src of the clicked image
+            modalImage.src = event.target.src;
+            // Show the image modal
+            modal.style.display = "block";
+        });
     }
-};
 
-// TODO: note this -> Ok so there's something slightly werid with permisions where in... I need to have the modal and modalImage vars inside here
-function galleryFunction1(smallImg) {
-    // TODO: yeah so the issue is that these vars have to be defined within this function...
-    let src = smallImg.src;
-    var modal = document.getElementById("myModal");
-    var modalImage = document.getElementById("modal-image");
-    console.log(src)
-    modal.style.display = "block";
-    modalImage.src = src;
+
+    // Other functions
+
+    // Close
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    // Close If Outside Click
+    function outsideClick(e) {
+        if (e.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
 }
 
-// Add a function to close the modal when the user clicks on the span element (the x)
-function closeFunction() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "none";
-}
-
-
+window.onload = OnLoad;
