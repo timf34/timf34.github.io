@@ -35,21 +35,27 @@ figure a {
     text-decoration: none;
 }
 
+figcaption {
+    grid-row: 2;
+    grid-column: 1;
+    background-color: rgba(255, 255, 255, .5);
+    padding: .2em .4em;
+    justify-self: start;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 1601px){
+    .gallery-container {
+        column-count: 5;
+        column-gap: 10px;
+    }
+}
 
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) and (max-width: 1600px){
     .gallery-container {
         column-count: 4;
         column-gap: 10px;
-    }
-
-    figcaption {
-        grid-row: 2;
-        grid-column: 1;
-        background-color: rgba(255, 255, 255, .5);
-        padding: .2em .4em;
-        justify-self: start;
-        font-size: 14px;
     }
 }
 
