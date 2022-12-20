@@ -60,9 +60,27 @@ figcaption {
 }
 
 /* For phone screens (or FHD screens... this isn't the most robust thing)*/
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1199px) and (min-width: 900px){
     .gallery-container {
         column-count: 3;
+        column-gap: 10px;
+    }
+
+    /* Make the figcaption smaller than what we have above */
+    figcaption {
+        grid-row: 2;
+        grid-column: 1;
+        background-color: rgba(255, 255, 255, .5);
+        padding: .1em .3em;
+        justify-self: start;
+        font-size: 12px;
+    }
+}
+
+/* For phone screens (or FHD screens... this isn't the most robust thing)*/
+@media only screen and (max-width: 899px) {
+    .gallery-container {
+        column-count: 2;
         column-gap: 10px;
     }
 
