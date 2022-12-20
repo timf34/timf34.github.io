@@ -35,18 +35,40 @@ figure a {
     text-decoration: none;
 }
 
-figcaption {
-    grid-row: 2;
-    grid-column: 1;
-    background-color: rgba(255,255,255,.5);
-    padding: .2em .5em;
-    justify-self: start;
+
+
+@media only screen and (min-width: 1200px) {
+    .gallery-container {
+        column-count: 4;
+        column-gap: 10px;
+    }
+
+    figcaption {
+        grid-row: 2;
+        grid-column: 1;
+        background-color: rgba(255, 255, 255, .5);
+        padding: .2em .5em;
+        justify-self: start;
+    }
 }
 
-.gallery-container {
-    column-count: 4;
-    column-gap: 10px;
+/* For phone screens (or FHD screens... this isn't the most robust thing)*/
+@media only screen and (max-width: 1199px) {
+    .gallery-container {
+        column-count: 3;
+        column-gap: 10px;
+    }
+
+    /* Make the figcaption smaller than what we have above */
+    figcaption {
+        grid-row: 2;
+        grid-column: 1;
+        background-color: rgba(255, 255, 255, .5);
+        padding: .2em .5em;
+        justify-self: start;
+    }
 }
+
 
 .gallery-container img {
     transition: all 0.5s ease-in-out;
