@@ -66,35 +66,52 @@ figcaption {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 50px; /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
+    width: 100%; /* Full width of the modal*/
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    overflow: auto;  /* Enable scroll if needed */
+
 }
 
 .modal-content {
-    margin: auto;
-    text-align: center;
+    /* Centre the image */
+    margin: 10% auto;
+
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*box-shadow: 0 0 50px rgba(250,0,100,0.8);*/
+    /*width: 90%;*/
+
+    /* Make the width the same as the image it contains */
+    /*width: 100%;*/
+    /*max-width: 70%;*/
+    /*max-height: 100%;*/
+
 }
 
-.modal-image {
-    display: inline-block;
+#modal-image {
+    margin: auto;
+    display: block;
+    box-shadow: 0 0 10px rgba(250, 0, 0, 0.8);
+    max-height: 90%;
+    max-width: 90%;
+    width: auto;
+    /*object-fit: contain;*/
+
 }
 
 /* The Close Button */
-.close {
-    color: #000;
+.close-btn {
+    color: lightgray;
     display: block;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close-btn:hover,
+.close-btn:focus {
     text-decoration: none;
     cursor: pointer;
 }
