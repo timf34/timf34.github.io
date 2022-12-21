@@ -21,8 +21,9 @@ figure {
     margin: 0;
     display: grid;
     grid-template-rows: 1fr auto;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     break-inside: avoid;
+    place-items: center;  /* Centre things in the grid (works for grids!)*/
 }
 
 figure > img {
@@ -30,17 +31,10 @@ figure > img {
     grid-column: 1;
 }
 
-figure a {
-    color: black;
-    text-decoration: none;
-}
-
 figcaption {
-    grid-row: 2;
+    grid-row: 0;
     grid-column: 1;
-    background-color: rgba(255, 255, 255, .5);
-    padding: .2em .4em;
-    justify-self: start;
+    padding: .1em .1em;
     font-size: 14px;
 }
 
@@ -68,11 +62,6 @@ figcaption {
 
     /* Make the figcaption smaller than what we have above */
     figcaption {
-        grid-row: 2;
-        grid-column: 1;
-        background-color: rgba(255, 255, 255, .5);
-        padding: .1em .3em;
-        justify-self: start;
         font-size: 12px;
     }
 }
@@ -86,11 +75,6 @@ figcaption {
 
     /* Make the figcaption smaller than what we have above */
     figcaption {
-        grid-row: 2;
-        grid-column: 1;
-        background-color: rgba(255, 255, 255, .5);
-        padding: .1em .3em;
-        justify-self: start;
         font-size: 12px;
     }
 }
