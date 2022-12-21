@@ -27,27 +27,27 @@
 <script>
     // Using a JSON file to store and create the images; makes it easier/ faster to add paintings
     var images = [
-        {src:"https://images.metmuseum.org/CRDImages/ep/original/DT4626.jpg",caption:"Two Men Contemplating the Moon by Caspar David Friedrich", meta: ""},
-        {src:"https://i.imgur.com/Zm1iPbr.jpeg",caption:"Carnation, Lily, Lily Rose by John Singer Sargent", meta: ""},
-        {src:"https://i.imgur.com/sDvV5Pf.jpeg",caption:"Achill Horses by Mainie Jellett", meta: ""},
-        {src:"https://i.imgur.com/n1sUS1d.jpeg",caption:"Vertumnus by Giuseppe Arcimboldo", meta: ""},
-        {src:"https://i.imgur.com/UGjKde6.jpeg",caption:"The Course of Empire: Destruction by Thomas Cole", meta: ""},
-        {src:"https://i.imgur.com/JLxtiA2.png",caption:"Winter Landscape by Casper David Friedrich", meta: ""},
-        {src:"https://i.imgur.com/debPP8m.jpeg",caption:"Singing Horseman by J.B. Yeats", meta: ""},
-        {src:"https://i.imgur.com/rrOWjv9.jpeg",caption:"Hope by George Frederic Watts", meta: ""},
-        {src:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/RokebyVenus.jpg/2880px-RokebyVenus.jpg",caption:"Rokeby Venus by Velazquez", meta: ""},
-        {src:"https://upload.wikimedia.org/wikipedia/commons/6/6f/Caspar_David_Friedrich_-_On_the_Sailing_Boat_-_WGA8255.jpg",caption:"On Board a Sailing Ship by Caspar David Friedrich", meta: ""},
-        {src:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Nighthawks_by_Edward_Hopper_1942.jpg/600px-Nighthawks_by_Edward_Hopper_1942.jpg",caption:"Nighthawks by Edward Hopper", meta: ""},
-        {src:"https://i.imgur.com/7vq6LtF.jpeg",caption:"Springtime by Claude Monet", meta: ""},
-        {src:"https://upload.wikimedia.org/wikipedia/commons/c/c1/Caspar_David_Friedrich_-_Tageszeitenzyklus%2C_Der_Morgen_%281821-22%29.jpg",caption:"The Morning by Caspar David Friedrich", meta: ""},
-        {src:"https://i.imgur.com/8RyfsHF.jpeg",caption:"The Isle of the Dead by Arnold Bocklin", meta: ""},
-        {src:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Caspar_David_Friedrich_-_Der_M%C3%B6nch_am_Meer_-_Google_Art_Project.jpg/2560px-Caspar_David_Friedrich_-_Der_M%C3%B6nch_am_Meer_-_Google_Art_Project.jpg",caption:"The Monk by the Sea by Casper David Friedrich", meta: ""},
-        {src:"https://i.imgur.com/A1kYYtU.jpeg",caption:"Self Portrait wtih Death Playing The Fiddle by Arnold Bocklin", meta: ""},
-        {src:"https://i.imgur.com/v1Ele4Q.jpeg",caption:"One: No. 31 by Jackson Pollock", meta: "29/11/22"},
-        {src:"https://i.imgur.com/XvTIRHH.jpeg",caption:"Ulysses Deriding Polyphemus by JMW Turner", meta: "29/11/22"},
-        {src:"https://i.imgur.com/HFDk7vc.jpeg",caption:"Ulysses and the Sirens by John William Waterhouse", meta: ""},
-        {src:"https://i.imgur.com/SLHJIg0.png",caption:"Nude Binding Her Hair by Koide Narashige", meta: "20/12/22;"},
-        {src:"https://i.imgur.com/8ikWlhg.jpeg",caption:"Overflow by Andrew Wyeth", meta:"20/12/22;"}
+        {src:"https://images.metmuseum.org/CRDImages/ep/original/DT4626.jpg", caption:"Two Men Contemplating the Moon by Caspar David Friedrich"},
+        {src:"https://i.imgur.com/Zm1iPbr.jpeg",caption:"Carnation, Lily, Lily Rose by John Singer Sargent"},
+        {src:"https://i.imgur.com/sDvV5Pf.jpeg",caption:"Achill Horses by Mainie Jellett"},
+        {src:"https://i.imgur.com/n1sUS1d.jpeg",caption:"Vertumnus by Giuseppe Arcimboldo"},
+        {src:"https://i.imgur.com/UGjKde6.jpeg",caption:"The Course of Empire: Destruction by Thomas Cole"},
+        {src:"https://i.imgur.com/JLxtiA2.png",caption:"Winter Landscape by Casper David Friedrich"},
+        {src:"https://i.imgur.com/debPP8m.jpeg",caption:"Singing Horseman by J.B. Yeats"},
+        {src:"https://i.imgur.com/rrOWjv9.jpeg",caption:"Hope by George Frederic Watts"},
+        {src:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/RokebyVenus.jpg/2880px-RokebyVenus.jpg",caption:"Rokeby Venus by Velazquez"},
+        {src:"https://upload.wikimedia.org/wikipedia/commons/6/6f/Caspar_David_Friedrich_-_On_the_Sailing_Boat_-_WGA8255.jpg",caption:"On Board a Sailing Ship by Caspar David Friedrich"},
+        {src:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Nighthawks_by_Edward_Hopper_1942.jpg/600px-Nighthawks_by_Edward_Hopper_1942.jpg",caption:"Nighthawks by Edward Hopper"},
+        {src:"https://i.imgur.com/7vq6LtF.jpeg",caption:"Springtime by Claude Monet"},
+        {src:"https://upload.wikimedia.org/wikipedia/commons/c/c1/Caspar_David_Friedrich_-_Tageszeitenzyklus%2C_Der_Morgen_%281821-22%29.jpg",caption:"The Morning by Caspar David Friedrich"},
+        {src:"https://i.imgur.com/8RyfsHF.jpeg",caption:"The Isle of the Dead by Arnold Bocklin"},
+        {src:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Caspar_David_Friedrich_-_Der_M%C3%B6nch_am_Meer_-_Google_Art_Project.jpg/2560px-Caspar_David_Friedrich_-_Der_M%C3%B6nch_am_Meer_-_Google_Art_Project.jpg",caption:"The Monk by the Sea by Casper David Friedrich"},
+        {src:"https://i.imgur.com/A1kYYtU.jpeg",caption:"Self Portrait wtih Death Playing The Fiddle by Arnold Bocklin"},
+        {src:"https://i.imgur.com/v1Ele4Q.jpeg",caption:"One: No. 31 by Jackson Pollock"},
+        {src:"https://i.imgur.com/XvTIRHH.jpeg",caption:"Ulysses Deriding Polyphemus by JMW Turner"},
+        {src:"https://i.imgur.com/HFDk7vc.jpeg",caption:"Ulysses and the Sirens by John William Waterhouse"},
+        {src:"https://i.imgur.com/SLHJIg0.png",caption:"Nude Binding Her Hair by Koide Narashige"},
+        {src:"https://i.imgur.com/8ikWlhg.jpeg",caption:"Overflow by Andrew Wyeth"}
     ];
 
     const galleryContainer = document.getElementById("gallery-container");
@@ -61,7 +61,7 @@
         let img = document.createElement("img");
         let figcaption = document.createElement("figcaption");
 
-        img.setAttribute(src, src);
+        img.setAttribute("src", src);
         img.setAttribute("alt", caption);
         img.setAttribute("class", "gallery-image");
         figcaption.textContent = caption;
