@@ -38,6 +38,7 @@ figcaption {
     grid-column: 1;
     padding: .1em .1em;
     font-size: 14px;
+    color: rgb(60, 60, 60);
 }
 
 @media only screen and (min-width: 1601px){
