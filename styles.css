@@ -40,3 +40,12 @@ body {
     margin-top: 1px;
     float: left;
 }
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul ul {
+    margin-left: 20px;
+}
