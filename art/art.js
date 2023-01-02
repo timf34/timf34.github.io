@@ -1,5 +1,9 @@
+// Setting some vars as global so they can be accessed by the prevImage and nextImage functions
+var figures;
+
+
 // Wait for DOM to Load
-function OnLoad() {
+window.onload = function() {
     // Get DOM Elements
     const modal = document.getElementById("my-modal");
     const modalImage = document.getElementById("modal-image");
@@ -11,7 +15,7 @@ function OnLoad() {
     window.addEventListener('click', outsideClick);
 
     // Reference to the figure elements
-    var figures = document.querySelectorAll("figure");
+    figures = document.querySelectorAll("figure");
 
 
     // Bind a click event listener to each image element
@@ -24,9 +28,6 @@ function OnLoad() {
         });
     }
 
-
-    // Other functions
-
     // Close
     function closeModal() {
         modal.style.display = 'none';
@@ -38,6 +39,34 @@ function OnLoad() {
             modal.style.display = 'none';
         }
     }
+
 }
 
-window.onload = OnLoad;
+// If clicked, move to the previous image in the gallery
+function changeImage(mode){
+    const modalImage = document.getElementById("modal-image");
+    var prev = modalImage.src;
+    var _iterator_src;
+    for (var i = 0; i < figures.length; i++) {
+        _iterator_src = figures[i].querySelector('img').src;
+        console.log(_iterator_src);
+        if (_iterator_src === prev) {
+            if (mode === "prev") {
+                if (i === 0) {
+                    modalImage.src = figures[figures.length - 1].querySelector('img').src;
+                } else {
+                    modalImage.src = figures[i - 1].querySelector('img').src;
+                }
+                break;
+            }
+            if (mode === "next") {
+                if (i === figures.length - 1) {
+                    modalImage.src = figures[0].querySelector('img').src;
+                } else {
+                    modalImage.src = figures[i + 1].querySelector('img').src;
+                }
+                break;
+            }
+        }
+    }
+}
