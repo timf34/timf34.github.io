@@ -144,6 +144,24 @@ figcaption {
     background-color: rgba(200,200,200,0.3);
 }
 
+/* The previous image button*/
+.prev-img, .next-img{
+    color: lightgray;
+    position: absolute;
+}
+
+.prev-img {
+    float: left;
+    top: 50%;
+    left: 0;
+}
+
+.next-img {
+    float: right;
+    top: 50%;
+    right: 0;
+}
+
 
 @keyframes modalopen {
     from {
