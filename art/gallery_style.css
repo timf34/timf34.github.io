@@ -150,6 +150,11 @@ figcaption {
     position: absolute;
 }
 
+.prev-img:hover, .next-img:hover, .prev-img:focus, .next-img:focus{
+    cursor: pointer;
+    background-color: rgba(200,170,170,0.4);
+}
+
 .prev-img {
     float: left;
     top: 50%;
