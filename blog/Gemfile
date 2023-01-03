@@ -7,8 +7,8 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-# gem "jekyll", "~> 4.3.1"
-gem "github-pages", "~> 227", group: :jekyll_plugins  # Source: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#:~:text=Add%20the%20github%2Dpages%20gem%20by%20editing%20the%20line%20starting%20with%20%23%20gem%20%22github%2Dpages%22.%20Change%20this%20line%20to%3A
+gem "jekyll", "~> 4.3.1"
+# gem "github-pages", "~> 227", group: :jekyll_plugins  # Source: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#:~:text=Add%20the%20github%2Dpages%20gem%20by%20editing%20the%20line%20starting%20with%20%23%20gem%20%22github%2Dpages%22.%20Change%20this%20line%20to%3A
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.5"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
