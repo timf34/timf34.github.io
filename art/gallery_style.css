@@ -46,6 +46,9 @@ figcaption {
         column-count: 5;
         column-gap: 10px;
     }
+    .prev-img, .next-img{
+        font-size: 48px;
+    }
 }
 
 
@@ -53,6 +56,9 @@ figcaption {
     .gallery-container {
         column-count: 4;
         column-gap: 10px;
+    }
+    .prev-img, .next-img{
+        font-size: 30px;
     }
 }
 
@@ -67,6 +73,10 @@ figcaption {
     figcaption {
         font-size: 12px;
     }
+
+    .prev-img, .next-img{
+        font-size: 22px;
+    }
 }
 
 /* For phone screens (or FHD screens... this isn't the most robust thing)*/
@@ -78,6 +88,10 @@ figcaption {
 
     /* Make the figcaption smaller than what we have above */
     figcaption {
+        font-size: 12px;
+    }
+
+    .prev-img, .next-img{
         font-size: 12px;
     }
 }
