@@ -49,6 +49,10 @@ figcaption {
     .prev-img, .next-img{
         font-size: 48px;
     }
+
+    figcaption {
+        font-size: 26px;
+    }
 }
 
 
@@ -59,6 +63,10 @@ figcaption {
     }
     .prev-img, .next-img{
         font-size: 30px;
+    }
+
+    figcaption {
+        font-size: 20px;
     }
 }
 
