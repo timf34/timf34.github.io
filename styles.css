@@ -1,51 +1,36 @@
-body {
-    font-family: Helvetica;
-    font-size: 15px;
+#toggle-mode {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-
-#content {
-    margin: auto;
-    width: 500px;
+.light-mode {
+    --nc-tx-1: #000000;
+    --nc-tx-2: #1A1A1A;
+    --nc-bg-1: #FFFFFF;
+    --nc-bg-2: #F6F8FA;
+    --nc-bg-3: #E5E7EB;
+    --nc-lk-1: #0070F3;
+    --nc-lk-2: #0366D6;
+    --nc-lk-tx: #FFFFFF;
+    --nc-ac-1: #79FFE1;
+    --nc-ac-tx: #0C4047;
 }
 
-#content p, #content ul {
-    color: #333;
-    line-height: 18px;
+.dark-mode {
+    --nc-tx-1: #ffffff;
+    --nc-tx-2: #eeeeee;
+    --nc-bg-1: #000000;
+    --nc-bg-2: #111111;
+    --nc-bg-3: #222222;
+    --nc-lk-1: #3291FF;
+    --nc-lk-2: #0070F3;
+    --nc-lk-tx: #FFFFFF;
+    --nc-ac-1: #7928CA;
+    --nc-ac-tx: #FFFFFF;
 }
 
-#content sup.note {
-    display: inline-block;
-    margin-top: -5px;
-}
-
-#content p.notop {
-    margin-top: 0;
-}
-
-#content p.nobottom {
-    margin-bottom: 0;
-}
-
-
-#content li {
-    margin-bottom: 0.7em;
-}
-
-.post + .post {
-    margin-top: 50px;
-}
-
-#back {
-    margin-top: 1px;
-    float: left;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
-
-ul ul {
-    margin-left: 20px;
+/* Overriding new.css which sets button color to blue background */
+button, button:enabled:hover, button:enabled:focus, button:enabled:active {
+    background: var(--nc-bg-1);
 }

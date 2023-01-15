@@ -12,10 +12,14 @@
 
     gtag('config', 'G-9X6M0RR4B5');
   </script>
-  <link rel="icon" type="image/png" href="./images/t-favicon.png?">
+  <script>
+    source="./js/darkmode.js";
+  </script>
+  <link rel="icon" type="image/png" href="components/images/t-favicon.png?">
   <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-  <link rel="stylesheet" href="https://newcss.net/theme/boilerplate.css">  <!-- Hardcode to stay in light mode -->
+  <link rel="stylesheet" href="styles.css">
+  <!--  <link rel="stylesheet" href="https://newcss.net/theme/boilerplate.css">  &lt;!&ndash; Hardcode to stay in light mode &ndash;&gt;-->
   <meta name="description" content="Tim's Personal website ;)" />
   <meta property="og:title" content="Tim's Personal website :)" />
   <meta property="og:url" content="https://timf34.github.io/" />
@@ -28,6 +32,44 @@
 
 <div id="content">
 <h1>Hi, I'm Tim</h1>
+
+
+<button id="toggle-mode" class="dark-mode-toggle">
+  <img src="components/svg/icons8-sun-64.svg" alt="Dark mode toggle" width="30" height="30"/>
+</button>
+<script>
+  const toggleMode = document.getElementById('toggle-mode');
+
+  const currentMode = localStorage.getItem('mode');
+  if (currentMode) {
+    document.documentElement.classList.add(currentMode);
+    console.log("current mode is " + currentMode);
+  }
+
+  toggleMode.addEventListener('click', () => {
+    console.log("clicked!")
+
+    const currentMode = localStorage.getItem('mode');
+
+    // toggle mode
+    if (currentMode === 'dark-mode') {
+      document.documentElement.classList.remove('dark-mode');
+      document.documentElement.classList.add('light-mode');
+      localStorage.setItem('mode', 'light-mode');
+
+      // Set the src of the icon to the sun
+      toggleMode.innerHTML = ' <img src="components/svg/icons8-sun-64.svg" alt="Dark mode toggle" width="30" height="30"/>';
+
+      console.log("set mode to light");
+    } else {
+      document.documentElement.classList.add('dark-mode');
+      document.documentElement.classList.remove('light-mode');
+      localStorage.setItem('mode', 'dark-mode');
+      toggleMode.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" aria-label="Moon Icon" fill="currentColor" stroke="none" width="30" height="30" class="inline-block" viewBox="0 0 20 20" id="dark-mode-icon"> <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path> </svg>';
+      console.log("set mode to dark");
+    }
+  });
+</script>
 
 <p>I'm 22, currently on a gap year from studying Computer Engineering at Trinity College Dublin. Working on <a href="https://fov.ie/">Field of Vision</a>, with my two friends Omar and David. We are building handheld touchbased devices to help visually impaired sports fans 'watch' live sport. I build everything software and camera related</p>
 
