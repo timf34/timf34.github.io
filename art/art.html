@@ -82,6 +82,7 @@
         img.setAttribute("src", src);
         img.setAttribute("alt", caption);
         img.setAttribute("class", "gallery-image");
+        img.setAttribute("loading", "lazy");
         figcaption.textContent = caption;
 
         figure.appendChild(img);
