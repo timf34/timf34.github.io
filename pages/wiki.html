@@ -1,85 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Wikipedia pages</title>
-  <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-  <link rel="stylesheet" href="../styles.css">
-  <script src="../js/darkmode.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9X6M0RR4B5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <meta charset="UTF-8">
+    <title>Wikipedia pages</title>
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../js/darkmode.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9X6M0RR4B5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'G-9X6M0RR4B5');
-  </script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-9X6M0RR4B5');
+    </script>
 </head>
 <body>
 
 <div id="back">
-  <a href="../index.html">Back to homepage</a>
+    <a href="../index.html">Back to homepage</a>
 </div>
 
 <button id="toggle-mode" class="dark-mode-toggle">
-  <img src="../components/svg/icons8-sun-64.svg" alt="Dark mode toggle" width="30" height="30"/>
+    <img src="../components/svg/icons8-sun-64.svg" alt="Dark mode toggle" width="30" height="30"/>
 </button>
 
 <! -- I should develop an easier way for me to add new entries - they all follow a very specified format -->
 
 
 <div id="content">
-  <div id="wiki_pages">
-    <h1>Cool Wikipedia pages</h1>
-    <ul>
-      <li><a href="https://en.wikipedia.org/wiki/Zeuxis_(painter)">Zeuxis (painter)</a></li>
-      <ul>
-        <li>"<a href="https://en.wikipedia.org/wiki/Death_from_laughter">Death by laughter</a>", and more old Greek artsy banter</li>
-      </ul>
-      <li><a href="https://en.wikipedia.org/wiki/Ice_trade">Ice Trade</a></li>
-      <ul>
-        <li>There used to be a large market ($660m in 2010 terms) for ice (from the artic!) pre good ice machines!</li>
-      </ul>
-      <li><a href="https://en.wikipedia.org/wiki/Angus_Wallace">Angus Wallace</a></li>
-      <ul>
-        <li>In-flight surgery with a coat-hanger and silverware!</li>
-      </ul>
-      <li><a href="https://en.wikipedia.org/wiki/Pain_in_babies">Pain in Babies</a></li>
-      <ul>
-        <li><em>"As recently as 1999, it was widely believed by medical professionals that babies could not feel pain..."</em></li>
-      </ul>
-      <li><a href="https://en.wikipedia.org/wiki/Dublin_whiskey_fire">Dublin Whiskey Fire</a></li>
-      <ul>
-        <li>0 fire related deaths; <a href="https://www.irishtimes.com/news/offbeat/the-night-a-river-of-whiskey-ran-through-the-streets-of-dublin-1.2743517#:~:text=%22It%20is%20stated,the%20derelict%20whiskey%E2%80%9D.">13 alcohol poisoning deaths</a> from drinking the potent whiskey flowing through the streets.</li>
-      </ul>
-      <li><a href=https://en.wikipedia.org/wiki/Destruction_under_the_Mongol_Empire">Destruction Under the Mongol Empire</a></li>
-      <ul>
-        <li>Ghengis Khan killed about 10% of the world's population, on par with the Black Death (WW2 killed about 3%)!</li>
-      </ul>
-      <li><a href="https://en.wikipedia.org/wiki/List_of_popes_who_died_violently">List of Popes who died violently</a></li>
-      <ul>
-        <li>Of the first 31 popes, 28 were killed...!</li>
-      </ul>
-      <li><a href="https://en.wikipedia.org/wiki/Dancing_mania">Dancing Mania</a></li>
-      <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Dancing_plague_of_1518">Dancing Plague of 1518</a>; also see the <a href="https://en.wikipedia.org/wiki/Tanganyika_laughter_epidemic">Tanganyika laughter epidemic</a></li>
-      </ul>
-      <li><a href="https://en.wikipedia.org/wiki/Barber_surgeon">Barber Surgeons</a></li>
-      <ul>
-        <li>Not just a barber, not just a surgeon, but a barber-surgeon.</li>
-      </ul>
-      <li><a href="https://en.wikipedia.org/wiki/1994_British_Army_Lynx_shootdown">1994 British Army Lynx Shootdown</a></li>
-      <ul>
-        <li><em>"Meanwhile, an IRA unit had mounted a Mark 15 mortar on a tractor, concealed behind bales of hay."</em></li>
-      </ul>
-      <li><a href="https://en.wikipedia.org/wiki/List_of_unusual_deaths">List of Unusual Deaths</a></li>
+    <div id="wiki_pages">
+        <h1>Cool Wikipedia pages</h1>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/Zeuxis_(painter)">Zeuxis (painter)</a></li>
+            <ul>
+                <li>"<a href="https://en.wikipedia.org/wiki/Death_from_laughter">Death by laughter</a>", and more old
+                    Greek artsy banter
+                </li>
+            </ul>
+            <li><a href="https://en.wikipedia.org/wiki/Ice_trade">Ice Trade</a></li>
+            <ul>
+                <li>There used to be a large market ($660m in 2010 terms) for ice (from the artic!) pre good ice
+                    machines!
+                </li>
+            </ul>
+            <li><a href="https://en.wikipedia.org/wiki/Angus_Wallace">Angus Wallace</a></li>
+            <ul>
+                <li>In-flight surgery with a coat-hanger and silverware!</li>
+            </ul>
+            <li><a href="https://en.wikipedia.org/wiki/Pain_in_babies">Pain in Babies</a></li>
+            <ul>
+                <li><em>"As recently as 1999, it was widely believed by medical professionals that babies could not feel
+                    pain..."</em></li>
+            </ul>
+            <li><a href="https://en.wikipedia.org/wiki/Dublin_whiskey_fire">Dublin Whiskey Fire</a></li>
+            <ul>
+                <li>0 fire related deaths; <a
+                        href="https://www.irishtimes.com/news/offbeat/the-night-a-river-of-whiskey-ran-through-the-streets-of-dublin-1.2743517#:~:text=%22It%20is%20stated,the%20derelict%20whiskey%E2%80%9D.">13
+                    alcohol poisoning deaths</a> from drinking the potent whiskey flowing through the streets.
+                </li>
+            </ul>
+            <li><a href=https://en.wikipedia.org/wiki/Destruction_under_the_Mongol_Empire">Destruction Under the Mongol
+                Empire</a></li>
+            <ul>
+                <li>Ghengis Khan killed about 10% of the world's population, on par with the Black Death (WW2 killed
+                    about 3%)!
+                </li>
+            </ul>
+            <li><a href="https://en.wikipedia.org/wiki/List_of_popes_who_died_violently">List of Popes who died
+                violently</a></li>
+            <ul>
+                <li>Of the first 31 popes, 28 were killed...!</li>
+            </ul>
+            <li><a href="https://en.wikipedia.org/wiki/Dancing_mania">Dancing Mania</a></li>
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Dancing_plague_of_1518">Dancing Plague of 1518</a>; also see
+                    the <a href="https://en.wikipedia.org/wiki/Tanganyika_laughter_epidemic">Tanganyika laughter
+                        epidemic</a></li>
+            </ul>
+            <li><a href="https://en.wikipedia.org/wiki/Barber_surgeon">Barber Surgeons</a></li>
+            <ul>
+                <li>Not just a barber, not just a surgeon, but a barber-surgeon.</li>
+            </ul>
+            <li><a href="https://en.wikipedia.org/wiki/1994_British_Army_Lynx_shootdown">1994 British Army Lynx
+                Shootdown</a></li>
+            <ul>
+                <li><em>"Meanwhile, an IRA unit had mounted a Mark 15 mortar on a tractor, concealed behind bales of
+                    hay."</em></li>
+            </ul>
+            <li><a href="https://en.wikipedia.org/wiki/List_of_unusual_deaths">List of Unusual Deaths</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Antonio_L%C3%B3pez_de_Santa_Anna">Antonio López de Santa Anna</a>
+            </li>
+            <ul>
+                <li>Also see <a href="https://historythings.com/time-santa-anna-held-funeral-amputated-leg/">That Time
+                    Santa Anna Held a Funeral for His Amputated Leg</a></li>
+            </ul>
 
-
-    </ul>
-  </div>
+        </ul>
+    </div>
 </div>
 
 </body>
