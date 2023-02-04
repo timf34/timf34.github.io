@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Wikipedia pages</title>
-  <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-  <link rel="stylesheet" href="../styles.css">
-  <script src="../js/darkmode.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9X6M0RR4B5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <meta charset="UTF-8">
+    <title>Wikipedia pages</title>
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../js/darkmode.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9X6M0RR4B5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'G-9X6M0RR4B5');
-  </script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-9X6M0RR4B5');
+    </script>
 </head>
 <body>
 
 <div id="back">
-  <a href="../index.html">Back to homepage</a>
+    <a href="../index.html">Back to homepage</a>
 </div>
 
 <button id="toggle-mode" class="dark-mode-toggle">
-  <img src="../components/svg/icons8-sun-64.svg" alt="Dark mode toggle" width="30" height="30"/>
+    <img src="../components/svg/icons8-sun-64.svg" alt="Dark mode toggle" width="30" height="30"/>
 </button>
 
 <!--Rather than putting these in one by one, I should write a script to create the HTML for this, or do a similar
@@ -33,33 +37,40 @@ Thing to what I did with the art gallery, just using a JSON file. Or even better
 up in .md, and then convert it to HTML. -->
 
 <div id="content">
-  <h1>Favourite blogs and websites</h1>
-  <div id="favourite_blogs">
-    <h3>Blogs</h3>
-    <p>Blogs with a * are just extra <em>cool</em> (via content || design). Quite incomplete, will be coming back</p>
-    <ul>
-      <li><a href="https://liamhz.com/">Liam Hinzman</a>*</li>
-      <li><a href="https://astralcodexten.substack.com/">Scott Alexander</a>, and <a href="https://slatestarcodex.com/">Slate Star Codex</a>*</li>
-      <li><a href="https://www.benkuhn.net/">Ben Kuhn</a></li>
-      <li><a href="https://nintil.com/">Nintil</a></li>
-      <li><a href="http://www.paulgraham.com/articles.html">Paul Graham</a>***</li>
-      <li><a href="https://simonsarris.com/">Simon Sarris</a>*</li>
-<!--      <li><a href="https://www.joelonsoftware.com/">Joel Spolsky</a></li>-->
-      <li><a href="https://marginalrevolution.com/">Marginal Revolution</a>* (via Tyler Cowen and Alex Tabarrok)</li>
-      <li><a href="https://zhengdongwang.com/">Zhengdong Wang</a>*</li>
-      <li><a href="https://blog.samaltman.com/">Sam Altman</a>*</li>
-      <li><a href="https://www.cold-takes.com/author/holden/">Cold Takes</a> via Holden Karnofsky</li>
-    </ul>
-  </div>
-  <div id="favourite_websites">
-    <h3>Cool Websites</h3>
-    <ul>
-      <li><a href="https://neal.fun/">neal.fun</a> - lots of fun games</li>
-      <li><a href="https://www.atlasobscura.com/">Atlas Obscure</a> - for travelling</li>
-      <li><a href="https://danielaandholden.com/themes-for-our-wedding/">Daniella and Holden</a> - a charming marriage invitation website</li>
-      <li><a href="https://pessimistsarchive.org/">Pessimists Archive</a></li>
-    </ul>
-  </div>
+    <h1>Favourite blogs and websites</h1>
+    <div id="favourite_blogs">
+        <h3>Blogs</h3>
+        <p>Blogs with a * are just extra <em>cool</em> (via content || design). Quite incomplete, will be coming back
+        </p>
+        <ul>
+            <li><a href="https://liamhz.com/">Liam Hinzman</a>*</li>
+            <li><a href="https://astralcodexten.substack.com/">Scott Alexander</a>, and <a
+                    href="https://slatestarcodex.com/">Slate Star Codex</a>*
+            </li>
+            <li><a href="https://www.benkuhn.net/">Ben Kuhn</a></li>
+            <li><a href="https://nintil.com/">Nintil</a></li>
+            <li><a href="http://www.paulgraham.com/articles.html">Paul Graham</a>***</li>
+            <li><a href="https://simonsarris.com/">Simon Sarris</a>*</li>
+            <!--      <li><a href="https://www.joelonsoftware.com/">Joel Spolsky</a></li>-->
+            <li><a href="https://marginalrevolution.com/">Marginal Revolution</a>* (via Tyler Cowen and Alex Tabarrok)
+            </li>
+            <li><a href="https://zhengdongwang.com/">Zhengdong Wang</a>*</li>
+            <li><a href="https://blog.samaltman.com/">Sam Altman</a>*</li>
+            <li><a href="https://www.cold-takes.com/author/holden/">Cold Takes</a> via Holden Karnofsky</li>
+        </ul>
+    </div>
+    <div id="favourite_websites">
+        <h3>Cool Websites</h3>
+        <ul>
+            <li><a href="https://neal.fun/">neal.fun</a> - lots of fun games</li>
+            <li><a href="https://www.atlasobscura.com/">Atlas Obscure</a> - for travelling</li>
+            <li><a href="https://danielaandholden.com/themes-for-our-wedding/">Daniella and Holden</a> - a charming
+                marriage invitation website
+            </li>
+            <li><a href="https://pessimistsarchive.org/">Pessimists Archive</a></li>
+            <li><a href="https://bleuje.com/">Blueje</a> - beautiful animations via Processing!</li>
+        </ul>
+    </div>
 </div>
 
 </body>
