@@ -1,7 +1,9 @@
 .link-banner nav{
     display: flex;
     flex-direction: row;
-    gap: 3ch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2ch;
 }
 
 .link-banner nav a {
@@ -22,4 +24,10 @@
     display: flex;
     justify-content: space-between;
     width: 70px;
+}
+
+@media (max-width: 450px) {
+    .link-banner nav a {
+        font-size: 15px;
+    }
 }
