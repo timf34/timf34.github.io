@@ -1,0 +1,25 @@
+.link-banner nav{
+    display: flex;
+    flex-direction: row;
+    gap: 3ch;
+}
+
+.link-banner nav a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.link-banner nav a.active {
+    text-decoration: none;
+    color: black;
+}
+
+.link-banner nav a:hover {
+    color: black;
+}
+
+.link- nav .socials {
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+}
