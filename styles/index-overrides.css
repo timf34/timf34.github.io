@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2ch;
+    justify-content: space-between; /*Uncomment to make link-banner links evenly spaced out*/
+    gap: 3ch;
     font-weight: bold;
 }
 
