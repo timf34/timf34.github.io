@@ -4,6 +4,7 @@
     right: 0;
 }
 
+/*CSS variables used to define colours*/
 .light-mode {
     --nc-tx-1: #000000;
     --nc-tx-2: #1A1A1A;
@@ -33,4 +34,13 @@
 /* Overriding new.css which sets button color to blue background */
 button, button:enabled:hover, button:enabled:focus, button:enabled:active {
     background: var(--nc-bg-1);
+}
+
+/*Link-banner link color in dark mode*/
+.dark-mode .link-banner nav a {
+    color: var(--nc-tx-1);
+}
+
+.dark-mode .link-banner nav a:hover{
+    color: rgb(190, 190, 190);
 }
