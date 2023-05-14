@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2ch;
+    font-weight: bold;
 }
 
 .link-banner nav a {
