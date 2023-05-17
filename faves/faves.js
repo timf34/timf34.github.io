@@ -37,14 +37,6 @@ window.onload = function () {
     let currentSeason = getSeasonFromDate(new Date());
     setInitialDisplayData(data, currentMonthIndex, currentYear, currentSeason);
 
-    // Initial Display
-    function setInitialDisplayData(data, currentMonthIndex, currentYear, currentSeason) {
-        let monthToDisplay = getMostRecentMonth(data, currentMonthIndex, currentYear);
-        updateList("music", monthToDisplay, data);
-        let seasonToDisplay = data["movies"][`${currentSeason} ${currentYear}`] ? `${currentSeason} ${currentYear}` : `Spring 2023`;
-        updateList("movies", seasonToDisplay, data);
-    }
-
     function closeMenuIfClickedOutside(e) {
         if (menu && !menu.contains(e.target) && e.target.id.indexOf("Header") === -1) { // ignore header clicks
             if (menu.parentNode) {
@@ -101,35 +93,6 @@ window.onload = function () {
         document.addEventListener('click', outsideClickListener);
     }
 
-    // Get the current month name
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-// Check if data for the current month and year exists, if not, find the most recent month that does exist
-    let monthToDisplay = null;
-    for (let i = currentMonthIndex; i >= 0; i--) {
-        let monthName = monthNames[i];
-        if (data["music"][`${monthName} ${currentYear}`]) {
-            monthToDisplay = `${monthName} ${currentYear}`;
-            break;
-        }
-    }
-
-// If no data was found for any month this year, default to December of the previous year
-    if (!monthToDisplay) {
-        monthToDisplay = `December ${currentYear - 1}`;
-    }
-
-// Set the default date for each category when the page loads
-    updateList("music", monthToDisplay, data);
-
-
-// Check if data for the current season and year exists
-    if (data["movies"][`${currentSeason} ${currentYear}`]) {
-        updateList("movies", `${currentSeason} ${currentYear}`, data);
-    } else {
-        updateList("movies", `Spring 2023`, data);
-    }
-
     document.getElementById("musicHeader").addEventListener("click", headerClick);
     document.getElementById("moviesHeader").addEventListener("click", headerClick);
 }
@@ -159,6 +122,14 @@ function createListItem(item) {
     listItem.appendChild(link);
 
     return listItem;
+}
+
+// Initial Display
+function setInitialDisplayData(data, currentMonthIndex, currentYear, currentSeason) {
+    let monthToDisplay = getMostRecentMonth(data, currentMonthIndex, currentYear);
+    updateList("music", monthToDisplay, data);
+    let seasonToDisplay = data["movies"][`${currentSeason} ${currentYear}`] ? `${currentSeason} ${currentYear}` : `Spring 2023`;
+    updateList("movies", seasonToDisplay, data);
 }
 
 function initializeData() {
