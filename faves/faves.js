@@ -25,10 +25,12 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
+let menu;
+let outsideClickListener;
+
 window.onload = function () {
 
-    let menu;
-    let outsideClickListener;
+
     let data = initializeData();
 
     // Initial setup
@@ -39,7 +41,7 @@ window.onload = function () {
 
     function headerClick(event) {
         console.log("Header clicked: " + event.target.id);
-        createMenu(event, data, outsideClickListener);
+        createMenu(event, data);
     }
 
     // TODO: refactor this code section!
@@ -150,16 +152,16 @@ function closeMenuIfClickedOutside(e, menu) {
 }
 
 // Update Outside Click Listener
-function updateOutsideClickListener(outsideClickListener) {
-    if (outsideClickListener) {
-        document.removeEventListener('click', outsideClickListener);
-    }
-    // Reference for the function so we can remove it later
-    outsideClickListener = function (e) {
-        closeMenuIfClickedOutside(e, menu);
-    };
-    document.addEventListener('click', outsideClickListener);
-}
+// function updateOutsideClickListener(outsideClickListener) {
+//     if (outsideClickListener) {
+//         document.removeEventListener('click', outsideClickListener);
+//     }
+//     // Reference for the function so we can remove it later
+//     outsideClickListener = function (e) {
+//         closeMenuIfClickedOutside(e, menu);
+//     };
+//     document.addEventListener('click', outsideClickListener);
+// }
 
 
 function initializeData() {
