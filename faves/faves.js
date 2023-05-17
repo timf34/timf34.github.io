@@ -11,11 +11,15 @@ function getSeason(date) {
     }
 }
 
+
+
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
 window.onload = function() {
+
+    let menu;
 
     let data = {
         "music": {
@@ -24,7 +28,6 @@ window.onload = function() {
                 { name: "Scheherezade by Rimsky-Korsakov", url: "https://open.spotify.com/album/3QXtNXmOyrOfZ2mWG4rw9v?si=OCTWg4FITpqYOzkKWCBZTA" },
                 { name: "jazz is for ordinary people by Berlioz", url: "https://open.spotify.com/track/12BaQt9aYdTlEtKreqB5V4?si=a0e7e15ef13640b0" }
             ],
-            // Continue for each month
         },
         "movies": {
             "Winter 2022": [
@@ -40,10 +43,8 @@ window.onload = function() {
                 { name: "Vicky Cristina Barcelona", url: "" },
                 { name: "Knock at the Cabin", url: "" }
             ],
-            // Continue for each month
         },
     };
-
 
     function updateList(category, periodYear) {
         let list = document.getElementById(category + "List");
@@ -67,6 +68,16 @@ window.onload = function() {
         document.getElementById(category + "Header").textContent = `${capitalizeFirstLetter(category)} - ${periodYear}`;
     }
 
+    function closeMenuIfClickedOutside(e) {
+        if (menu && !menu.contains(e.target) && e.target.id.indexOf("Header") === -1) { // ignore header clicks
+            if(menu.parentNode) {
+                menu.parentNode.removeChild(menu);
+                document.removeEventListener('click', closeMenuIfClickedOutside);
+            } else {
+                console.log("menu.parentNode is null");
+            }
+        }
+    }
 
     function headerClick(event) {
         console.log("Header clicked: " + event.target.id);
@@ -74,7 +85,7 @@ window.onload = function() {
         let category = event.target.id.replace("Header", "");
 
         // Create the menu
-        let menu = document.createElement("div");
+        menu = document.createElement("div");
         menu.id = "menu";
 
         for (let periodYear in data[category]) {
@@ -82,7 +93,11 @@ window.onload = function() {
             periodYearOption.textContent = periodYear;
             periodYearOption.addEventListener("click", function () {
                 updateList(category, periodYear);
-                menu.parentNode.removeChild(menu); // remove menu after selection
+                setTimeout(() => {
+                    if (menu.parentNode) {
+                        menu.parentNode.removeChild(menu); // remove menu after selection
+                    }
+                }, 0);
             });
             menu.appendChild(periodYearOption);
         }
@@ -95,6 +110,10 @@ window.onload = function() {
 
         // Add the new menu to the document
         event.target.insertAdjacentElement('afterend', menu);
+
+        // First, remove any existing event listener
+        document.removeEventListener('click', closeMenuIfClickedOutside);
+        document.addEventListener('click', (e) => closeMenuIfClickedOutside(e));
     }
 
 
@@ -136,7 +155,7 @@ window.onload = function() {
 
 
 
-        document.getElementById("musicHeader").addEventListener("click", headerClick);
+    document.getElementById("musicHeader").addEventListener("click", headerClick);
     document.getElementById("moviesHeader").addEventListener("click", headerClick);
 
     console.log("Loaded faves.js")
