@@ -1,16 +1,25 @@
-function getSeason(date) {
-    let month = date.getMonth();
-    if (month < 3) {
-        return 'Winter';
-    } else if (month < 6) {
-        return 'Spring';
-    } else if (month < 9) {
-        return 'Summer';
-    } else {
-        return 'Autumn';
-    }
+// Constants
+const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const SEASONS = ["Winter", "Spring", "Summer", "Autumn"];
+const DEFAULT_MONTH = "May";
+const DEFAULT_SEASON = "Spring";
+
+// Utility Functions
+
+function getSeasonFromDate(date) {
+    const month = date.getMonth();
+    return SEASONS[Math.floor(month / 3)];
 }
 
+function getMostRecentMonth(data, currentMonthIndex, currentYear) {
+    for (let i = currentMonthIndex; i >= 0; i--) {
+        const monthName = MONTH_NAMES[i];
+        if (data[`${monthName} ${currentYear}`]) {
+            return `${monthName} ${currentYear}`;
+        }
+    }
+    return `${DEFAULT_MONTH} ${currentYear}`;
+}
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
@@ -55,9 +64,17 @@ window.onload = function () {
         },
     };
 
+    // Initial setup
+    let currentMonthIndex = new Date().getMonth();
+    let currentYear = new Date().getFullYear();
+    let currentSeason = getSeasonFromDate(new Date());
+    setInitialDisplayData(data, currentMonthIndex, currentYear, currentSeason);
+
     function updateList(category, periodYear) {
         let list = document.getElementById(category + "List");
         list.innerHTML = "";
+
+        console.log(periodYear);
 
         for (let item of data[category][periodYear]) {
             let listItem = document.createElement("li");
@@ -75,6 +92,14 @@ window.onload = function () {
         }
 
         document.getElementById(category + "Header").textContent = `${capitalizeFirstLetter(category)} - ${periodYear}`;
+    }
+
+    // Initial Display
+    function setInitialDisplayData(data, currentMonthIndex, currentYear, currentSeason) {
+        let monthToDisplay = getMostRecentMonth(data, currentMonthIndex, currentYear);
+        updateList("music", monthToDisplay);
+        let seasonToDisplay = data["movies"][`${currentSeason} ${currentYear}`] ? `${currentSeason} ${currentYear}` : `Spring 2023`;
+        updateList("movies", seasonToDisplay);
     }
 
     function closeMenuIfClickedOutside(e) {
@@ -137,10 +162,6 @@ window.onload = function () {
     // Get the current month name
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-// Get the current month index and year
-    let currentMonthIndex = new Date().getMonth();
-    let currentYear = new Date().getFullYear();
-
 // Check if data for the current month and year exists, if not, find the most recent month that does exist
     let monthToDisplay = null;
     for (let i = currentMonthIndex; i >= 0; i--) {
@@ -159,8 +180,6 @@ window.onload = function () {
 // Set the default date for each category when the page loads
     updateList("music", monthToDisplay);
 
-// Get the current season
-    let currentSeason = getSeason(new Date());
 
 // Check if data for the current season and year exists
     if (data["movies"][`${currentSeason} ${currentYear}`]) {
@@ -172,3 +191,5 @@ window.onload = function () {
     document.getElementById("musicHeader").addEventListener("click", headerClick);
     document.getElementById("moviesHeader").addEventListener("click", headerClick);
 }
+
+
