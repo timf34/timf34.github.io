@@ -37,11 +37,11 @@ window.onload = function() {
     };
 
 
-    function updateList(category, year, month) {
+    function updateList(category, month) {
         let list = document.getElementById(category + "List");
         list.innerHTML = "";
 
-        for (let item of data[category][year][month]) {
+        for (let item of data[category][month]) {
             let listItem = document.createElement("li");
 
             // Create an anchor element
@@ -71,7 +71,7 @@ window.onload = function() {
         let menu = document.createElement("div");
         menu.id = "menu";
 
-        // Period can be either a month or season
+        // Period can be month or season
         for (let period in data[category]) {
             let periodOption = document.createElement("button");
             periodOption.textContent = period;
