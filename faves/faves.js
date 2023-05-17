@@ -1,3 +1,20 @@
+function getSeason(date) {
+    let month = date.getMonth();
+    if (month < 3) {
+        return 'Winter';
+    } else if (month < 6) {
+        return 'Spring';
+    } else if (month < 9) {
+        return 'Summer';
+    } else {
+        return 'Autumn';
+    }
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+}
+
 window.onload = function() {
 
     let data = {
@@ -10,24 +27,21 @@ window.onload = function() {
             // Continue for each month
         },
         "movies": {
-            "January": ["Movie 1", "Movie 2", "Movie 3"],
-            "February": ["Movie 4", "Movie 5", "Movie 6"],
-            "March": ["Movie 4", "Movie 5", "Movie 6"],
-            "A": ["Movie 4", "Movie 5", "Movie 6"],
-            "a": ["Movie 4", "Movie 5", "Movie 6"],
-            "bry": ["Movie 5", "Movie 5", "Movie 6"],
-            "ury": ["Movie 4", "Movie 5", "Movie 6"],
-            "uary": ["Movie 4", "Movie 5", "Movie 6"],
+            "Spring": [
+                { name: "Puss in Boots: The Last Wish", url: "" },
+                { name: "Vicky Cristina Barcelona", url: "" },
+                { name: "Knock at the Cabin", url: "" }
+            ],
             // Continue for each month
         },
-        // Continue for other categories
     };
 
-    function updateList(category, month) {
+
+    function updateList(category, year, month) {
         let list = document.getElementById(category + "List");
         list.innerHTML = "";
 
-        for (let item of data[category][month]) {
+        for (let item of data[category][year][month]) {
             let listItem = document.createElement("li");
 
             // Create an anchor element
@@ -46,28 +60,26 @@ window.onload = function() {
     }
 
 
-    function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-    }
-
     function headerClick(event) {
 
         console.log("Header clicked: " + event.target.id);
 
         let category = event.target.id.replace("Header", "");
+        console.log("Category:", category); // Add this line
 
         // Create the menu
         let menu = document.createElement("div");
         menu.id = "menu";
 
-        for (let month in data[category]) {
-            let monthOption = document.createElement("button");
-            monthOption.textContent = month;
-            monthOption.addEventListener("click", function () {
-                updateList(category, month);
+        // Period can be either a month or season
+        for (let period in data[category]) {
+            let periodOption = document.createElement("button");
+            periodOption.textContent = period;
+            periodOption.addEventListener("click", function () {
+                updateList(category, period);
                 menu.parentNode.removeChild(menu); // remove menu after selection
             });
-            menu.appendChild(monthOption);
+            menu.appendChild(periodOption);
         }
 
         // Remove any existing menu
@@ -81,6 +93,7 @@ window.onload = function() {
         event.target.insertAdjacentElement('afterend', menu);
 
     }
+
 
     // Get the current month name
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -105,7 +118,18 @@ window.onload = function() {
 
     // Set the default date for each category when the page loads
     updateList("music", monthToDisplay);
-    updateList("movies", monthToDisplay);
+
+    // Get the current season
+    let currentSeason = getSeason(new Date());
+
+    // Check if data for the current season exists
+    if (data["movies"][currentSeason]) {
+        updateList("movies", currentSeason);
+    } else {
+        // If no data was found for the current season, you could default to a specific season, or find the most recent season with data, similar to how you did for the months.
+        updateList["movies"]["Spring"];
+    }
+
 
     document.getElementById("musicHeader").addEventListener("click", headerClick);
     document.getElementById("moviesHeader").addEventListener("click", headerClick);
