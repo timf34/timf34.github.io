@@ -37,17 +37,6 @@ window.onload = function () {
     let currentSeason = getSeasonFromDate(new Date());
     setInitialDisplayData(data, currentMonthIndex, currentYear, currentSeason);
 
-    function closeMenuIfClickedOutside(e) {
-        if (menu && !menu.contains(e.target) && e.target.id.indexOf("Header") === -1) { // ignore header clicks
-            if (menu.parentNode) {
-                menu.parentNode.removeChild(menu);
-                document.removeEventListener('click', closeMenuIfClickedOutside);
-            } else {
-                console.log("menu.parentNode is null");
-            }
-        }
-    }
-
     function headerClick(event) {
         console.log("Header clicked: " + event.target.id);
 
@@ -72,10 +61,7 @@ window.onload = function () {
         }
 
         // Remove any existing menu
-        let oldMenu = document.getElementById("menu");
-        if (oldMenu) {
-            oldMenu.parentNode.removeChild(oldMenu);
-        }
+        removeExistingMenu();
 
         // Add the new menu to the document
         event.target.insertAdjacentElement('afterend', menu);
@@ -95,6 +81,47 @@ window.onload = function () {
 
     document.getElementById("musicHeader").addEventListener("click", headerClick);
     document.getElementById("moviesHeader").addEventListener("click", headerClick);
+}
+
+// Creating Menu
+function createMenu(event, data) {
+    // let category = event.target.id.replace("Header", "");
+    // // Create the menu
+    // menu = createMenuElement(data, category);
+    // // Remove any existing menu
+    // removeExistingMenu();
+    // // Add the new menu to the document
+    // event.target.insertAdjacentElement('afterend', menu);
+    // // Remove old listener before adding a new one
+    // updateOutsideClickListener();
+
+    let category = event.target.id.replace("Header", "");
+
+    // Create the menu
+    menu = document.createElement("div");
+    menu.id = "menu";
+
+    for (let periodYear in data[category]) {
+        let periodYearOption = document.createElement("button");
+        periodYearOption.textContent = periodYear;
+        periodYearOption.addEventListener("click", function () {
+            updateList(category, periodYear, data);
+            setTimeout(() => {
+                if (menu.parentNode) {
+                    menu.parentNode.removeChild(menu); // remove menu after selection
+                }
+            }, 0);
+        });
+        menu.appendChild(periodYearOption);
+    }
+}
+
+function removeExistingMenu() {
+    // Remove any existing menu
+    let oldMenu = document.getElementById("menu");
+    if (oldMenu) {
+        oldMenu.parentNode.removeChild(oldMenu);
+    }
 }
 
 function updateList(category, periodYear, data) {
@@ -131,6 +158,30 @@ function setInitialDisplayData(data, currentMonthIndex, currentYear, currentSeas
     let seasonToDisplay = data["movies"][`${currentSeason} ${currentYear}`] ? `${currentSeason} ${currentYear}` : `Spring 2023`;
     updateList("movies", seasonToDisplay, data);
 }
+
+function closeMenuIfClickedOutside(e) {
+    if (menu && !menu.contains(e.target) && e.target.id.indexOf("Header") === -1) { // ignore header clicks
+        if (menu.parentNode) {
+            menu.parentNode.removeChild(menu);
+            document.removeEventListener('click', closeMenuIfClickedOutside);
+        } else {
+            console.log("menu.parentNode is null");
+        }
+    }
+}
+
+// Update Outside Click Listener
+function updateOutsideClickListener() {
+    if (outsideClickListener) {
+        document.removeEventListener('click', outsideClickListener);
+    }
+    // Reference for the function so we can remove it later
+    outsideClickListener = function (e) {
+        closeMenuIfClickedOutside(e, menu);
+    };
+    document.addEventListener('click', outsideClickListener);
+}
+
 
 function initializeData() {
     // TODO: make this into a JSON file that I read!
