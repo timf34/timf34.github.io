@@ -120,9 +120,17 @@ window.onload = function () {
         // Add the new menu to the document
         event.target.insertAdjacentElement('afterend', menu);
 
-        // First, remove any existing event listener
-        document.removeEventListener('click', closeMenuIfClickedOutside);
-        document.addEventListener('click', (e) => closeMenuIfClickedOutside(e));
+        // Remove old listener before adding a new one
+        if (outsideClickListener) {
+            document.removeEventListener('click', outsideClickListener);
+        }
+
+        // Reference for the function so we can remove it later
+        outsideClickListener = function (e) {
+            closeMenuIfClickedOutside(e, menu);
+        };
+
+        document.addEventListener('click', outsideClickListener);
     }
 
 
@@ -161,10 +169,6 @@ window.onload = function () {
         updateList("movies", `Spring 2023`);
     }
 
-
     document.getElementById("musicHeader").addEventListener("click", headerClick);
     document.getElementById("moviesHeader").addEventListener("click", headerClick);
-
-    console.log("Loaded faves.js")
-
 }
