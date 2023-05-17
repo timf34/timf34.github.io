@@ -1,0 +1,28 @@
+#menu {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    max-height: 200px; /* Set a fixed height for the menu */
+    overflow-y: auto;  /* Add a scrollbar if the content exceeds the height */
+    border-radius: 5px; /* Round the corners of the buttons */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle drop-shadow */
+
+}
+
+#menu button {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+    background-color: white; /* Set a background color for buttons */
+    padding: 5px 10px; /* Add some padding around the button text */
+    border: 1px solid #ccc; /* Add a border around the buttons */
+    border-radius: 3px; /* Round the corners of the menu */
+}
+
+#menu button:hover {
+    background-color: #f0f0f0; /* Change the background color when hovered */
+    cursor: pointer; /* Change the cursor to a pointer when hovering */
+}
+
