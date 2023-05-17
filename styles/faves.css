@@ -1,6 +1,13 @@
-h2 {
+h3 {
     position: relative;
 }
+
+h3:hover {
+    cursor: pointer;
+    color: RGBA(0, 0, 0, 0.5);
+}
+
+
 
 
 #menu {
