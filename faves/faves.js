@@ -2,8 +2,11 @@ window.onload = function() {
 
     let data = {
         "music": {
-            "January": ["Song 1", "Song 2", "Song 3"],
-            "February": ["Song 4", "Song 5", "Song 6"],
+            "May": [
+                { name: "Sway by Michael Bublé", url: "https://open.spotify.com/track/2ajUl8lBLAXOXNpG4NEPMz?si=84b1f38d9c9545be" },
+                { name: "Scheherezade by Rimsky-Korsakov", url: "https://open.spotify.com/album/3QXtNXmOyrOfZ2mWG4rw9v?si=OCTWg4FITpqYOzkKWCBZTA" },
+                { name: "jazz is for ordinary people by Berlioz", url: "https://open.spotify.com/track/12BaQt9aYdTlEtKreqB5V4?si=a0e7e15ef13640b0" }
+            ],
             // Continue for each month
         },
         "movies": {
@@ -21,17 +24,27 @@ window.onload = function() {
     };
 
     function updateList(category, month) {
-        console.log("Updating list for " + category + " in " + month);
         let list = document.getElementById(category + "List");
         list.innerHTML = "";
 
         for (let item of data[category][month]) {
             let listItem = document.createElement("li");
-            listItem.textContent = item;
+
+            // Create an anchor element
+            let link = document.createElement("a");
+            link.href = item.url;
+            link.textContent = item.name;
+            link.target = "_blank"; // Optional: open the link in a new tab
+
+            // Append the anchor element to the list item
+            listItem.appendChild(link);
+
             list.appendChild(listItem);
         }
+
         document.getElementById(category + "Header").textContent = `${capitalizeFirstLetter(category)} - ${month}`;
     }
+
 
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
