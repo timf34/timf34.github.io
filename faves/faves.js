@@ -64,7 +64,9 @@ window.onload = function() {
         }
 
         // Add the new menu to the document
-        event.target.parentNode.appendChild(menu);
+        // event.target.appendChild(menu);
+        event.target.insertAdjacentElement('afterend', menu);
+
     }
 
     // Get the current month name
