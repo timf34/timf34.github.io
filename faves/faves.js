@@ -12,36 +12,45 @@ function getSeason(date) {
 }
 
 
-
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
-window.onload = function() {
+window.onload = function () {
 
     let menu;
+    let outsideClickListener;
 
     let data = {
         "music": {
             "May 2023": [
-                { name: "Sway by Michael Bublé", url: "https://open.spotify.com/track/2ajUl8lBLAXOXNpG4NEPMz?si=84b1f38d9c9545be" },
-                { name: "Scheherezade by Rimsky-Korsakov", url: "https://open.spotify.com/album/3QXtNXmOyrOfZ2mWG4rw9v?si=OCTWg4FITpqYOzkKWCBZTA" },
-                { name: "jazz is for ordinary people by Berlioz", url: "https://open.spotify.com/track/12BaQt9aYdTlEtKreqB5V4?si=a0e7e15ef13640b0" }
+                {
+                    name: "Sway by Michael Bublé",
+                    url: "https://open.spotify.com/track/2ajUl8lBLAXOXNpG4NEPMz?si=84b1f38d9c9545be"
+                },
+                {
+                    name: "Scheherezade by Rimsky-Korsakov",
+                    url: "https://open.spotify.com/album/3QXtNXmOyrOfZ2mWG4rw9v?si=OCTWg4FITpqYOzkKWCBZTA"
+                },
+                {
+                    name: "jazz is for ordinary people by Berlioz",
+                    url: "https://open.spotify.com/track/12BaQt9aYdTlEtKreqB5V4?si=a0e7e15ef13640b0"
+                }
             ],
         },
         "movies": {
             "Winter 2022": [
-                { name: "From up on Poppy Hill", url: "" },
-                { name: "The Mitchells vs the Machines", url: "" },
-                { name: "Avatar 2", url: "" },
-                { name: "Children of Men", url: "" },
-                { name: "City of God", url: "" },
-                { name: "Triangle of Sadness", url: "" }
+                {name: "From up on Poppy Hill", url: ""},
+                {name: "The Mitchells vs the Machines", url: ""},
+                {name: "Avatar 2", url: ""},
+                {name: "Children of Men", url: ""},
+                {name: "City of God", url: ""},
+                {name: "Triangle of Sadness", url: ""}
             ],
             "Spring 2023": [
-                { name: "Puss in Boots: The Last Wish", url: "" },
-                { name: "Vicky Cristina Barcelona", url: "" },
-                { name: "Knock at the Cabin", url: "" }
+                {name: "Puss in Boots: The Last Wish", url: ""},
+                {name: "Vicky Cristina Barcelona", url: ""},
+                {name: "Knock at the Cabin", url: ""}
             ],
         },
     };
@@ -70,7 +79,7 @@ window.onload = function() {
 
     function closeMenuIfClickedOutside(e) {
         if (menu && !menu.contains(e.target) && e.target.id.indexOf("Header") === -1) { // ignore header clicks
-            if(menu.parentNode) {
+            if (menu.parentNode) {
                 menu.parentNode.removeChild(menu);
                 document.removeEventListener('click', closeMenuIfClickedOutside);
             } else {
@@ -117,7 +126,6 @@ window.onload = function() {
     }
 
 
-
     // Get the current month name
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -152,7 +160,6 @@ window.onload = function() {
     } else {
         updateList("movies", `Spring 2023`);
     }
-
 
 
     document.getElementById("musicHeader").addEventListener("click", headerClick);
