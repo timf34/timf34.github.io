@@ -159,7 +159,7 @@ function setInitialDisplayData(data, currentMonthIndex, currentYear, currentSeas
     updateList("movies", seasonToDisplay, data);
 }
 
-function closeMenuIfClickedOutside(e) {
+function closeMenuIfClickedOutside(e, menu) {
     if (menu && !menu.contains(e.target) && e.target.id.indexOf("Header") === -1) { // ignore header clicks
         if (menu.parentNode) {
             menu.parentNode.removeChild(menu);
