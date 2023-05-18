@@ -30,7 +30,6 @@ let outsideClickListener;
 
 window.onload = function () {
 
-
     let data = initializeData();
 
     // Initial setup
@@ -85,7 +84,6 @@ function createMenuElement(data, category) {
 
 // Creating Menu
 function createMenu(event, data) {
-
 
     let category = event.target.id.replace("Header", "");
     // Create the menu
@@ -180,6 +178,10 @@ function initializeData() {
                 {
                     name: "jazz is for ordinary people by Berlioz",
                     url: "https://open.spotify.com/track/12BaQt9aYdTlEtKreqB5V4?si=a0e7e15ef13640b0"
+                },
+                {
+                    name: "Symphony No. 9 ('From the New World') by Dvořák",
+                    url: "https://open.spotify.com/album/7En0QelaesFgXH73AB8EDI?si=0WtUwvWOReGKju1C0V4qhg"
                 }
             ],
         },
