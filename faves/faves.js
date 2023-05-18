@@ -28,9 +28,16 @@ function capitalizeFirstLetter(string) {
 let menu;
 let outsideClickListener;
 
-window.onload = function () {
+window.onload = async function () {
 
-    let data = initializeData();
+    let data;
+
+    try {
+        data = await initializeData();
+    } catch (err) {
+        console.error('Failed to load data: ', err);
+        return; // Exit the function if data loading failed
+    }
 
     // Initial setup
     let currentMonthIndex = new Date().getMonth();
@@ -162,43 +169,8 @@ function closeMenuIfClickedOutside(e, menu) {
 // }
 
 
-function initializeData() {
-    // TODO: make this into a JSON file that I read!
-    return {
-        "music": {
-            "May 2023": [
-                {
-                    name: "Sway by Michael Bublé",
-                    url: "https://open.spotify.com/track/2ajUl8lBLAXOXNpG4NEPMz?si=84b1f38d9c9545be"
-                },
-                {
-                    name: "Scheherezade by Rimsky-Korsakov",
-                    url: "https://open.spotify.com/album/3QXtNXmOyrOfZ2mWG4rw9v?si=OCTWg4FITpqYOzkKWCBZTA"
-                },
-                {
-                    name: "jazz is for ordinary people by Berlioz",
-                    url: "https://open.spotify.com/track/12BaQt9aYdTlEtKreqB5V4?si=a0e7e15ef13640b0"
-                },
-                {
-                    name: "Symphony No. 9 ('From the New World') by Dvořák",
-                    url: "https://open.spotify.com/album/7En0QelaesFgXH73AB8EDI?si=0WtUwvWOReGKju1C0V4qhg"
-                }
-            ],
-        },
-        "movies": {
-            "Winter 2022": [
-                {name: "From up on Poppy Hill", url: ""},
-                {name: "The Mitchells vs the Machines", url: ""},
-                {name: "Avatar 2", url: ""},
-                {name: "Children of Men", url: ""},
-                {name: "City of God", url: ""},
-                {name: "Triangle of Sadness", url: ""}
-            ],
-            "Spring 2023": [
-                {name: "Puss in Boots: The Last Wish", url: ""},
-                {name: "Vicky Cristina Barcelona", url: ""},
-                {name: "Knock at the Cabin", url: ""}
-            ],
-        },
-    };
+async function initializeData() {
+    const response = await fetch("faves.json");
+    const data = await response.json();
+    return data;
 }
