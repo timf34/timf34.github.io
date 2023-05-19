@@ -31,6 +31,18 @@ async function initializeData() {
     return data;
 }
 
+// Initial Display
+function setInitialDisplayData(data, currentMonthIndex, currentYear, currentSeason) {
+    let musicMonthToDisplay = getMostRecentMonth(data["music"], currentMonthIndex, currentYear);
+    updateList("music", musicMonthToDisplay, data);
+    let seasonToDisplay = data["movies"][`${currentSeason} ${currentYear}`] ? `${currentSeason} ${currentYear}` : `Spring 2023`;
+    updateList("movies", seasonToDisplay, data);
+    let linksMonthToDisplay = getMostRecentMonth(data["links"], currentMonthIndex, currentYear);
+    updateList("links", linksMonthToDisplay, data);
+    let booksMonthToDisplay = getMostRecentMonth(data["books"], currentMonthIndex, currentYear);
+    updateList("books", linksMonthToDisplay, data);
+}
+
 let menu;
 let outsideClickListener;
 
@@ -72,6 +84,8 @@ window.onload = async function () {
 
     document.getElementById("musicHeader").addEventListener("click", headerClick);
     document.getElementById("moviesHeader").addEventListener("click", headerClick);
+    document.getElementById("linksHeader").addEventListener("click", headerClick);
+    document.getElementById("booksHeader").addEventListener("click", headerClick);
 }
 
 function createMenuElement(data, category) {
@@ -143,13 +157,6 @@ function createListItem(item) {
     return listItem;
 }
 
-// Initial Display
-function setInitialDisplayData(data, currentMonthIndex, currentYear, currentSeason) {
-    let monthToDisplay = getMostRecentMonth(data, currentMonthIndex, currentYear);
-    updateList("music", monthToDisplay, data);
-    let seasonToDisplay = data["movies"][`${currentSeason} ${currentYear}`] ? `${currentSeason} ${currentYear}` : `Spring 2023`;
-    updateList("movies", seasonToDisplay, data);
-}
 
 function closeMenuIfClickedOutside(e, menu) {
     if (menu && !menu.contains(e.target) && e.target.id.indexOf("Header") === -1) { // ignore header clicks

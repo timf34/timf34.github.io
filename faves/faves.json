@@ -17,7 +17,14 @@
         "name": "Symphony No. 9 ('From the New World') by Dvořák",
         "url": "https://open.spotify.com/album/7En0QelaesFgXH73AB8EDI?si=0WtUwvWOReGKju1C0V4qhg"
       }
+    ],
+    "GOAT": [
+      {
+        "name": "Mahler 2",
+        "url": "https://youtu.be/4MPuoOj5TIw"
+      }
     ]
+
   },
   "movies": {
     "Winter 2022": [
@@ -32,6 +39,29 @@
       {"name": "Puss in Boots: The Last Wish", "url": ""},
       {"name": "Vicky Cristina Barcelona", "url": ""},
       {"name": "Knock at the Cabin", "url": ""}
+    ],
+    "GOAT": [
+      {"name": "Everything Everywhere all at Once", "url": ""},
+      {"name": "Y Tu Mama Tambien", "url": ""},
+      {"name": "La La Land", "url": ""},
+      {"name": "Spirited Away", "url": ""},
+      {"name": "Before Sunrise and Before Sunset", "url": ""},
+      {"name": "Blade Runner 2049", "url": ""},
+      {"name": "LOTR", "url": ""},
+    ]
+  },
+  "links": {
+    "May 2023": [
+      {"name": "liamhz.com", "url": "https://liamhz.com/"},
+      {"name": "The Leverage of LLMs for Individuals", "url": "https://mazzzystar.github.io/2023/05/10/LLM-for-individual/"},
+      {"name": "The Gentle Seduction by Marc Stiegler", "url": "http://www.skyhunter.com/marcs/GentleSeduction.html"},
+      {"name": "The Businessman and the Fisherman", "url": "https://thestorytellers.com/the-businessman-and-the-fisherman/"},
+      {"name":  "David Holz's Twitter", "url":  "https://twitter.com/DavidSHolz?s=20"}
+    ]
+  },
+  "books": {
+    "May 2023": [
+      {"name": "The Book of Laughter and Forgetting by Milan Kundera", "url": ""}
     ]
   }
 }
