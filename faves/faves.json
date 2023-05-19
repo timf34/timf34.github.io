@@ -62,6 +62,13 @@
   "books": {
     "May 2023": [
       {"name": "The Book of Laughter and Forgetting by Milan Kundera", "url": ""}
+    ],
+    "GOAT": [
+      {"name": "A Man Called Ove by Frederik Backman", "url": ""},
+      {"name": "Insomniac City by Bill Hayes", "url": ""},
+      {"name": "The Unbearable Lightness of Being by Milan Kundera", "url": ""},
+      {"name": "Sally Rooney (everything)", "url": ""},
+      {"name": "Endurance by Alfred Lansing", "url": ""}
     ]
   }
 }
