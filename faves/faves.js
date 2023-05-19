@@ -25,6 +25,12 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
+async function initializeData() {
+    const response = await fetch("faves.json");
+    const data = await response.json();
+    return data;
+}
+
 let menu;
 let outsideClickListener;
 
@@ -167,10 +173,3 @@ function closeMenuIfClickedOutside(e, menu) {
 //     };
 //     document.addEventListener('click', outsideClickListener);
 // }
-
-
-async function initializeData() {
-    const response = await fetch("faves.json");
-    const data = await response.json();
-    return data;
-}
