@@ -62,7 +62,9 @@
       {"name": "The Businessman and the Fisherman", "url": "https://thestorytellers.com/the-businessman-and-the-fisherman/"},
       {"name":  "David Holz's Twitter", "url":  "https://twitter.com/DavidSHolz?s=20"},
       {"name":  "Max Bittker Projects", "url":  "https://maxbittker.com/projects"},
-      {"name":  "Sam Rose (samwho)", "url":  "https://samwho.dev/"}
+      {"name":  "Sam Rose (samwho)", "url":  "https://samwho.dev/"},
+      {"name":  "VertextShaderArt.com", "url":  "https://www.vertexshaderart.com/"},
+      {"name":  "Synergy (via ShaderToy)", "url":  "https://www.shadertoy.com/view/ms3XWl"}
     ]
   },
   "books": {
