@@ -40,7 +40,7 @@ function setInitialDisplayData(data, currentMonthIndex, currentYear, currentSeas
     let linksMonthToDisplay = getMostRecentMonth(data["links"], currentMonthIndex, currentYear);
     updateList("links", linksMonthToDisplay, data);
     let booksMonthToDisplay = getMostRecentMonth(data["books"], currentMonthIndex, currentYear);
-    updateList("books", linksMonthToDisplay, data);
+    updateList("books", booksMonthToDisplay, data);
 }
 
 let menu;
