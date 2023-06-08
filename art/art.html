@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>The Gallery</title>
-    <link rel="stylesheet" href="gallery_style.css" />
+    <link rel="stylesheet" href="gallery_style.css"/>
     <script src="./art.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9X6M0RR4B5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-9X6M0RR4B5');
@@ -26,7 +30,7 @@
     <div class="modal-content">
         <span class="close-btn">&times;</span>
         <img src="" id="modal-image" alt=""/>
-        <span class="prev-img" id="prev-img" onclick="changeImage('prev')" >&#10094;</span>
+        <span class="prev-img" id="prev-img" onclick="changeImage('prev')">&#10094;</span>
         <span class="next-img" id="nextImage" onclick="changeImage('next')">&#10095; </span>
     </div>
 </div>
@@ -38,48 +42,69 @@
 <script>
     // Using a JSON file to store and create the images; makes it easier/ faster to add paintings
     var images = [
-        {src:"https://images.metmuseum.org/CRDImages/ep/original/DT4626.jpg", caption:"Two Men Contemplating the Moon by Caspar David Friedrich"},
-        {src:"https://i.imgur.com/Zm1iPbr.jpeg",caption:"Carnation, Lily, Lily Rose by John Singer Sargent"},
-        {src:"https://i.imgur.com/sDvV5Pf.jpeg",caption:"Achill Horses by Mainie Jellett"},
-        {src:"https://i.imgur.com/n1sUS1d.jpeg",caption:"Vertumnus by Giuseppe Arcimboldo"},
-        {src:"https://i.imgur.com/UGjKde6.jpeg",caption:"The Course of Empire: Destruction by Thomas Cole"},
-        {src:"https://i.imgur.com/JLxtiA2.png",caption:"Winter Landscape by Casper David Friedrich"},
-        {src:"https://i.imgur.com/debPP8m.jpeg",caption:"Singing Horseman by J.B. Yeats"},
-        {src:"https://i.imgur.com/rrOWjv9.jpeg",caption:"Hope by George Frederic Watts"},
-        {src:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/RokebyVenus.jpg/2880px-RokebyVenus.jpg",caption:"Rokeby Venus by Velazquez"},
-        {src:"https://upload.wikimedia.org/wikipedia/commons/6/6f/Caspar_David_Friedrich_-_On_the_Sailing_Boat_-_WGA8255.jpg",caption:"On Board a Sailing Ship by Caspar David Friedrich"},
-        {src:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Nighthawks_by_Edward_Hopper_1942.jpg/600px-Nighthawks_by_Edward_Hopper_1942.jpg",caption:"Nighthawks by Edward Hopper"},
-        {src:"https://i.imgur.com/7vq6LtF.jpeg",caption:"Springtime by Claude Monet"},
-        {src:"https://upload.wikimedia.org/wikipedia/commons/c/c1/Caspar_David_Friedrich_-_Tageszeitenzyklus%2C_Der_Morgen_%281821-22%29.jpg",caption:"The Morning by Caspar David Friedrich"},
-        {src:"https://i.imgur.com/8RyfsHF.jpeg",caption:"The Isle of the Dead by Arnold Bocklin"},
-        {src:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Caspar_David_Friedrich_-_Der_M%C3%B6nch_am_Meer_-_Google_Art_Project.jpg/2560px-Caspar_David_Friedrich_-_Der_M%C3%B6nch_am_Meer_-_Google_Art_Project.jpg",caption:"The Monk by the Sea by Casper David Friedrich"},
-        {src:"https://i.imgur.com/A1kYYtU.jpeg",caption:"Self Portrait wtih Death Playing The Fiddle by Arnold Bocklin"},
-        {src:"https://i.imgur.com/v1Ele4Q.jpeg",caption:"One: No. 31 by Jackson Pollock"},
-        {src:"https://i.imgur.com/XvTIRHH.jpeg",caption:"Ulysses Deriding Polyphemus by JMW Turner"},
-        {src:"https://i.imgur.com/HFDk7vc.jpeg",caption:"Ulysses and the Sirens by John William Waterhouse"},
-        {src:"https://i.imgur.com/SLHJIg0.png",caption:"Nude Binding Her Hair by Koide Narashige"},
-        {src:"https://i.imgur.com/8ikWlhg.jpeg",caption:"Overflow by Andrew Wyeth"},
-        {src:"https://i.imgur.com/XRtSPab.jpeg",caption:"The Mountain Mists by Herbert James Draper"},  // Added 22/12/22
-        {src:"https://i.imgur.com/eJmeTux.jpeg", caption:"Pieta by Mainie Jellett"},  // Added 29/12/22
-        {src:"https://i.imgur.com/bhRicxw.jpeg", caption:"New York Movie by Edward Hopper"},  // Added 2/1/23
-        {src:"https://i.imgur.com/jf59cTx.jpeg", caption:"The Lovers by Rene Magritte"},  // Added 2/1/23
-        {src:"https://i.imgur.com/RkwmYEQ.jpeg", caption:"The Fountain of Inspiration by Constant Montald"}, // Added 15/1/23
-        {src:"https://i.imgur.com/pl7Iosn.jpeg", caption:"Nude (1916) by Amedeo Modigliani"}, // Added 15/1/23
-        {src:"https://i.imgur.com/qR4oPAG.jpeg", caption:"Satan's Treasures by Jean Delville"}, // Added 15/1/23
-        {src:"https://i.imgur.com/fONsk2u.jpeg", caption:"Engloutissement by André Masson"}, // Added 5/2/23
-        {src:"https://i.imgur.com/YtcRU9f.jpeg", caption:"October by Jules Bastien-Lepage"},  // Added 11/3/23
-        {src:"https://i.imgur.com/gnc7Roi.jpeg", caption:"An Experiment on a Bird in the Air Pump by Joseph Wright"},  // Added 13/3/23
-        {src:"https://i.imgur.com/TAWkuh6.jpeg", caption:"Sadko by Ilya Repin"},
-        {src:"https://i.imgur.com/QGcGN3D.jpeg", caption: "A Covent Garden, Brittany by William Leech"},  // Added 1/5/23
-        {src:"https://i.imgur.com/ScoHT7Y.jpeg", caption: "Pandora by Odilon Redon"},  // Added 10/5/23
-        {src:"https://i.imgur.com/bCryV1i.jpeg", caption: "Morning by Ilya Glazunov"},  // Added 14/5/23
-        {src:"https://i.imgur.com/Pe92brF.jpeg", caption: "Pygmalion and Galatea by Jean-Leon Gerome"}, // Added 14/5/23
+        {
+            src: "https://images.metmuseum.org/CRDImages/ep/original/DT4626.jpg",
+            caption: "Two Men Contemplating the Moon by Caspar David Friedrich"
+        },
+        {src: "https://i.imgur.com/Zm1iPbr.jpeg", caption: "Carnation, Lily, Lily Rose by John Singer Sargent"},
+        {src: "https://i.imgur.com/sDvV5Pf.jpeg", caption: "Achill Horses by Mainie Jellett"},
+        {src: "https://i.imgur.com/n1sUS1d.jpeg", caption: "Vertumnus by Giuseppe Arcimboldo"},
+        {src: "https://i.imgur.com/UGjKde6.jpeg", caption: "The Course of Empire: Destruction by Thomas Cole"},
+        {src: "https://i.imgur.com/JLxtiA2.png", caption: "Winter Landscape by Casper David Friedrich"},
+        {src: "https://i.imgur.com/debPP8m.jpeg", caption: "Singing Horseman by J.B. Yeats"},
+        {src: "https://i.imgur.com/rrOWjv9.jpeg", caption: "Hope by George Frederic Watts"},
+        {
+            src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/RokebyVenus.jpg/2880px-RokebyVenus.jpg",
+            caption: "Rokeby Venus by Velazquez"
+        },
+        {
+            src: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Caspar_David_Friedrich_-_On_the_Sailing_Boat_-_WGA8255.jpg",
+            caption: "On Board a Sailing Ship by Caspar David Friedrich"
+        },
+        {
+            src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Nighthawks_by_Edward_Hopper_1942.jpg/600px-Nighthawks_by_Edward_Hopper_1942.jpg",
+            caption: "Nighthawks by Edward Hopper"
+        },
+        {src: "https://i.imgur.com/7vq6LtF.jpeg", caption: "Springtime by Claude Monet"},
+        {
+            src: "https://upload.wikimedia.org/wikipedia/commons/c/c1/Caspar_David_Friedrich_-_Tageszeitenzyklus%2C_Der_Morgen_%281821-22%29.jpg",
+            caption: "The Morning by Caspar David Friedrich"
+        },
+        {src: "https://i.imgur.com/8RyfsHF.jpeg", caption: "The Isle of the Dead by Arnold Bocklin"},
+        {
+            src: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Caspar_David_Friedrich_-_Der_M%C3%B6nch_am_Meer_-_Google_Art_Project.jpg/2560px-Caspar_David_Friedrich_-_Der_M%C3%B6nch_am_Meer_-_Google_Art_Project.jpg",
+            caption: "The Monk by the Sea by Casper David Friedrich"
+        },
+        {
+            src: "https://i.imgur.com/A1kYYtU.jpeg",
+            caption: "Self Portrait wtih Death Playing The Fiddle by Arnold Bocklin"
+        },
+        {src: "https://i.imgur.com/v1Ele4Q.jpeg", caption: "One: No. 31 by Jackson Pollock"},
+        {src: "https://i.imgur.com/XvTIRHH.jpeg", caption: "Ulysses Deriding Polyphemus by JMW Turner"},
+        {src: "https://i.imgur.com/HFDk7vc.jpeg", caption: "Ulysses and the Sirens by John William Waterhouse"},
+        {src: "https://i.imgur.com/SLHJIg0.png", caption: "Nude Binding Her Hair by Koide Narashige"},
+        {src: "https://i.imgur.com/8ikWlhg.jpeg", caption: "Overflow by Andrew Wyeth"},
+        {src: "https://i.imgur.com/XRtSPab.jpeg", caption: "The Mountain Mists by Herbert James Draper"},  // Added 22/12/22
+        {src: "https://i.imgur.com/eJmeTux.jpeg", caption: "Pieta by Mainie Jellett"},  // Added 29/12/22
+        {src: "https://i.imgur.com/bhRicxw.jpeg", caption: "New York Movie by Edward Hopper"},  // Added 2/1/23
+        {src: "https://i.imgur.com/jf59cTx.jpeg", caption: "The Lovers by Rene Magritte"},  // Added 2/1/23
+        {src: "https://i.imgur.com/RkwmYEQ.jpeg", caption: "The Fountain of Inspiration by Constant Montald"}, // Added 15/1/23
+        {src: "https://i.imgur.com/pl7Iosn.jpeg", caption: "Nude (1916) by Amedeo Modigliani"}, // Added 15/1/23
+        {src: "https://i.imgur.com/qR4oPAG.jpeg", caption: "Satan's Treasures by Jean Delville"}, // Added 15/1/23
+        {src: "https://i.imgur.com/fONsk2u.jpeg", caption: "Engloutissement by André Masson"}, // Added 5/2/23
+        {src: "https://i.imgur.com/YtcRU9f.jpeg", caption: "October by Jules Bastien-Lepage"},  // Added 11/3/23
+        {src: "https://i.imgur.com/gnc7Roi.jpeg", caption: "An Experiment on a Bird in the Air Pump by Joseph Wright"},  // Added 13/3/23
+        {src: "https://i.imgur.com/TAWkuh6.jpeg", caption: "Sadko by Ilya Repin"},
+        {src: "https://i.imgur.com/QGcGN3D.jpeg", caption: "A Covent Garden, Brittany by William Leech"},  // Added 1/5/23
+        {src: "https://i.imgur.com/ScoHT7Y.jpeg", caption: "Pandora by Odilon Redon"},  // Added 10/5/23
+        {src: "https://i.imgur.com/bCryV1i.jpeg", caption: "Morning by Ilya Glazunov"},  // Added 14/5/23
+        {src: "https://i.imgur.com/Pe92brF.jpeg", caption: "Pygmalion and Galatea by Jean-Leon Gerome"}, // Added 14/5/23
         {src: "https://i.imgur.com/U9oQNrV.jpeg", caption: "The Voyage of Life: Childhood by Thomas Cole"}, // Added 15/5/23
-        {src:"https://i.imgur.com/d3AljHv.jpeg", caption: "The Voyage of Life: Youth by Thomas Cole"},  // Added 15/5/23
-        {src:"https://i.imgur.com/MvjMBQg.jpeg", caption: "The Voyage of Life: Manhood by Thomas Cole"}, // Added 15/5/23
-        {src:"https://i.imgur.com/ZynEcJo.jpeg", caption: "The Voyage of Life: Old Age by Thomas Cole"}, // Added 15/5/23
-        {src:"https://i.imgur.com/lttcCru.jpeg", caption: "Bal Tabarin by Jan Sluijters"}, // Added 20/5/23
-        {src:"https://i.imgur.com/KscSzw7.jpeg", caption: "Le Ballet by Gaston La Touche"} // Added 20/5/23
+        {src: "https://i.imgur.com/d3AljHv.jpeg", caption: "The Voyage of Life: Youth by Thomas Cole"},  // Added 15/5/23
+        {src: "https://i.imgur.com/MvjMBQg.jpeg", caption: "The Voyage of Life: Manhood by Thomas Cole"}, // Added 15/5/23
+        {src: "https://i.imgur.com/ZynEcJo.jpeg", caption: "The Voyage of Life: Old Age by Thomas Cole"}, // Added 15/5/23
+        {src: "https://i.imgur.com/lttcCru.jpeg", caption: "Bal Tabarin by Jan Sluijters"}, // Added 20/5/23
+        {src: "https://i.imgur.com/KscSzw7.jpeg", caption: "Le Ballet by Gaston La Touche"} // Added 20/5/23
     ];
 
     const galleryContainer = document.getElementById("gallery-container");
@@ -93,6 +118,12 @@
         let img = document.createElement("img");
         let figcaption = document.createElement("figcaption");
 
+        // Use thumbnail image for gallery
+        img.setAttribute("data-original", src); // Save original image source for modal
+        if (image.src.includes("imgur.com")) {
+            // Replace the .jpeg extension with "l.jpeg"
+            src = src.replace(".jpeg", "l.jpeg");
+        }
         img.setAttribute("src", src);
         img.setAttribute("alt", caption);
         img.setAttribute("class", "gallery-image");

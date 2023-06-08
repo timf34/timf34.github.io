@@ -17,14 +17,13 @@ window.onload = function() {
     // Reference to the figure elements
     figures = document.querySelectorAll("figure");
 
-
     // Bind a click event listener to each image element
     for (var i = 0; i < figures.length; i++) {
         figures[i].addEventListener("click", function (event) {
             // Check if an image was clicked on (so we only open a modal if an image was clicked)
             if (event.target.tagName === "IMG") {
                 // Set the src attribute of the enlarged image element to the src of the clicked image
-                modalImage.src = event.target.src;
+                modalImage.src = event.target.getAttribute("data-original");
                 // Show the image modal
                 modal.style.display = "block";
             }
