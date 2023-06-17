@@ -32,7 +32,8 @@
   },
   "movies": {
     "Summer 2023": [
-      {"name":  "John Wick: Chapter 4", "url": ""}
+      {"name":  "John Wick: Chapter 4", "url": ""},
+      {"name":  "Cave of Forgotten Dreams", "url":  ""}
     ],
     "Spring 2023": [
       {"name": "Puss in Boots: The Last Wish", "url": ""},
@@ -71,12 +72,20 @@
     ],
     "June 2023": [
       {"name": "Bookbear Express", "url": "https://ava.substack.com/"},
-      {"name": "Mind Mine", "url": "https://mindmine.substack.com/"}
+      {"name": "Mind Mine", "url": "https://mindmine.substack.com/"},
+      {"name":  "starting from nix", "url":  "https://nicoles.substack.com/"},
+      {"name": "Read Something Wonderful", "url": "https://readsomethingwonderful.com/about"},
+      {"name": "Looking for Alice", "url":  "https://www.henrikkarlsson.xyz/p/looking-for-alice"},
+      {"name": "Joy in the Merely Real", "url": "https://www.lesswrong.com/posts/x4dG4GhpZH2hgz59x/joy-in-the-merely-real"}
+
     ]
   },
   "books": {
     "May 2023": [
       {"name": "The Book of Laughter and Forgetting by Milan Kundera", "url": ""}
+    ],
+    "June 2023": [
+      {"name":  "Goldmund and Narcissus by Herman Hesse", "url":  ""}
     ],
     "GOAT": [
       {"name": "A Man Called Ove by Frederik Backman", "url": ""},
