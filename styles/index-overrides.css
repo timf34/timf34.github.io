@@ -9,11 +9,12 @@
 
 .link-banner nav a {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .link-banner nav a.active {
     text-decoration: none;
+    font-weight: bold;
     color: black;
 }
 
