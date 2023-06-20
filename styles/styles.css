@@ -48,7 +48,7 @@ button, button:enabled:hover, button:enabled:focus, button:enabled:active {
 .light-mode a {
     color: rgb(0, 0, 0);
     text-decoration: underline;
-    text-decoration-color: rgb(249, 135, 255);
+    text-decoration-color: rgb(249, 145, 255, 0.8);
 }
 
 .light-mode a:hover {
@@ -58,7 +58,7 @@ button, button:enabled:hover, button:enabled:focus, button:enabled:active {
 .dark-mode a {
     color: var(--nc-tx-1);
     text-decoration: underline;
-    text-decoration-color: rgb(255, 160, 255);
+    text-decoration-color: rgb(255, 160, 255, 0.9);
 }
 
 .dark-mode a:hover {
