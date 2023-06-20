@@ -44,3 +44,23 @@ button, button:enabled:hover, button:enabled:focus, button:enabled:active {
 .dark-mode .link-banner nav a:hover{
     color: rgb(190, 190, 190);
 }
+
+.light-mode a {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    text-decoration-color: rgb(249, 135, 255);
+}
+
+.light-mode a:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode a {
+    color: var(--nc-tx-1);
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 160, 255);
+}
+
+.dark-mode a:hover {
+    color: rgba(255, 255, 255, 0.85);
+}

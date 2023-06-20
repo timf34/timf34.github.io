@@ -67,6 +67,7 @@
 
 .navbar-links.show {
     display: flex;
+    gap: 1ch;
 }
 
 @media (max-width: 450px) {
