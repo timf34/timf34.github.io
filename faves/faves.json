@@ -33,7 +33,8 @@
   "movies": {
     "Summer 2023": [
       {"name":  "John Wick: Chapter 4", "url": ""},
-      {"name":  "Cave of Forgotten Dreams", "url":  ""}
+      {"name":  "Cave of Forgotten Dreams", "url":  ""},
+      {"name":  "Herb and Dorothy", "url":  ""}
     ],
     "Spring 2023": [
       {"name": "Puss in Boots: The Last Wish", "url": ""},
