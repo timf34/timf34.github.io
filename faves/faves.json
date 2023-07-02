@@ -1,5 +1,27 @@
 {
   "music": {
+    "June 2023": [
+      {
+        "name": "Take Control by Kream",
+        "url": ""
+      },
+      {
+        "name": "Gimme Some Keys by Matroda",
+        "url": ""
+      },
+      {
+        "name": "Coma Cat - Purple Disco Machine Re-work by Tensnake",
+        "url": ""
+      },
+      {
+        "name": "Rachmaninoff Piano Concert No. 1 - Final movement",
+        "url": ""
+      },
+      {
+        "name": "Tchaikovsky: 1812 Overture in E-flat Minor",
+        "url": ""
+      }
+    ],
     "May 2023": [
       {
         "name": "Sway by Michael Bublé",
@@ -77,7 +99,8 @@
       {"name":  "starting from nix", "url":  "https://nicoles.substack.com/"},
       {"name": "Read Something Wonderful", "url": "https://readsomethingwonderful.com/about"},
       {"name": "Looking for Alice", "url":  "https://www.henrikkarlsson.xyz/p/looking-for-alice"},
-      {"name": "Joy in the Merely Real", "url": "https://www.lesswrong.com/posts/x4dG4GhpZH2hgz59x/joy-in-the-merely-real"}
+      {"name": "Joy in the Merely Real", "url": "https://www.lesswrong.com/posts/x4dG4GhpZH2hgz59x/joy-in-the-merely-real"},
+      {"name":  "Things you're allowed to do", "url": "https://milan.cvitkovic.net/writing/things_youre_allowed_to_do/"}
 
     ]
   },
