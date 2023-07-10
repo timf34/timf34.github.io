@@ -101,7 +101,11 @@
       {"name": "Looking for Alice", "url":  "https://www.henrikkarlsson.xyz/p/looking-for-alice"},
       {"name": "Joy in the Merely Real", "url": "https://www.lesswrong.com/posts/x4dG4GhpZH2hgz59x/joy-in-the-merely-real"},
       {"name":  "Things you're allowed to do", "url": "https://milan.cvitkovic.net/writing/things_youre_allowed_to_do/"}
-
+    ],
+    "July 2023": [
+      {"name":  "oimo.io", "url":  "https://oimo.io/works"},
+      {"name":  "WTF Happened in 1971", "url":  "https://wtfhappenedin1971.com/"},
+      {"name": "Banksy Explained", "url" : "https://banksyexplained.com/"}
     ]
   },
   "books": {
