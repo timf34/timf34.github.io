@@ -57,3 +57,6 @@ Updated: 17-07-2023
 45. [ ] Eat kebabs in Istanbul
 46. [ ] Go to a nude beach and get naked
 47. [ ] Act like a tourist at the Guiness Storehouse!
+48. [ ] Have a threesome
+49. [ ] Meditate in a temple in Vietnam
+50. [ ] Go to a traditional scandinavian sauna (if you don't get whacked with a birch branch, it doesn't count)
