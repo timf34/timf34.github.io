@@ -60,3 +60,4 @@ Updated: 17-07-2023
 48. [ ] Have a threesome
 49. [ ] Meditate in a temple in Vietnam
 50. [ ] Go to a traditional scandinavian sauna (if you don't get whacked with a birch branch, it doesn't count)
+51. [ ] Ask a girl out IRL
