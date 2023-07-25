@@ -96,7 +96,7 @@
     "June 2023": [
       {"name": "Bookbear Express", "url": "https://ava.substack.com/"},
       {"name": "Mind Mine", "url": "https://mindmine.substack.com/"},
-      {"name":  "starting from nix", "url":  "https://nicoles.substack.com/"},
+      {"name": "starting from nix", "url":  "https://nicoles.substack.com/"},
       {"name": "Read Something Wonderful", "url": "https://readsomethingwonderful.com/about"},
       {"name": "Looking for Alice", "url":  "https://www.henrikkarlsson.xyz/p/looking-for-alice"},
       {"name": "Joy in the Merely Real", "url": "https://www.lesswrong.com/posts/x4dG4GhpZH2hgz59x/joy-in-the-merely-real"},
@@ -104,9 +104,11 @@
       {"name": "Speed Matters", "url": "https://jsomers.net/blog/speed-matters"}
     ],
     "July 2023": [
-      {"name":  "oimo.io", "url":  "https://oimo.io/works"},
-      {"name":  "WTF Happened in 1971", "url":  "https://wtfhappenedin1971.com/"},
-      {"name": "Banksy Explained", "url" : "https://banksyexplained.com/"}
+      {"name": "oimo.io", "url":  "https://oimo.io/works"},
+      {"name": "WTF Happened in 1971", "url":  "https://wtfhappenedin1971.com/"},
+      {"name": "Banksy Explained", "url" : "https://banksyexplained.com/"},
+      {"name": "The Greatest Life Hacks in the World (for Now) (NYT)", "url": "https://www.nytimes.com/2022/06/02/opinion/david-brooks-life-hacks.html"},
+      {"name": "Derek Sivers", "url": "https://sive.rs/blog"}
     ]
   },
   "books": {
@@ -115,6 +117,9 @@
     ],
     "June 2023": [
       {"name":  "Goldmund and Narcissus by Herman Hesse", "url":  ""}
+    ],
+    "July 2023": [
+      {"name": "Tomorrow and tomorrow and tomorrow", "url": ""}
     ],
     "GOAT": [
       {"name": "A Man Called Ove by Frederik Backman", "url": ""},
