@@ -7,6 +7,7 @@ Related links:
 - TODO: find That essay on bird watching/ flowers (re making continuous things in your environment
   discreet) 
 
+---
 
 - Feyli
   - Dhivehi (Maldvies) word that describes the feeling of sand between your toes as waves recede 
