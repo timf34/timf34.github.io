@@ -1,11 +1,11 @@
 # Words
 
-I like learning words that are in some languages but not others. 
+Words that are in some languages but not others. 
 
 Related links:
 - Top HN comment [here](https://news.ycombinator.com/item?id=37189556)
-- That essay on bird watching (re making continuous things in your environment
-  discreet, appreciating them more)
+- TODO: find That essay on bird watching/ flowers (re making continuous things in your environment
+  discreet) 
 
 
 - Feyli
