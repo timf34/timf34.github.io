@@ -1,4 +1,4 @@
-# Interesting Words
+# Words
 
 I like learning words that are in some languages but not others. 
 
