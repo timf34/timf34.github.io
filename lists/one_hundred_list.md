@@ -1,3 +1,8 @@
+---
+title: 100 List
+---
+
+
 # 100 List
 
 Things I want to do before I die.
@@ -46,7 +51,7 @@ Updated: 17-07-2023
 34. [ ] Host a house party 
 35. [x] Visit the Sistene Chapel
 36. [ ] Drive a convertible along the Italian Riviera
-37. [ ] Eat Thai food in Thailand
+37. [x] Eat Thai food in Thailand
 38. [x] Do research in Cambridge and/ or Oxford
 39. [ ] Scuba dive
 40. [ ] Get drunk at the Pav
