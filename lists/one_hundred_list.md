@@ -66,3 +66,4 @@ Updated: 17-07-2023
 49. [ ] Meditate in a temple in Vietnam
 50. [ ] Go to a traditional scandinavian sauna (if you don't get whacked with a birch branch, it doesn't count)
 51. [ ] Ask a girl out IRL
+52. [ ] Create a Python package and upload it to PyPi
