@@ -149,6 +149,10 @@
     "August 2023": [
       {"name": "Male orangutan physiology", "url": "https://en.wikipedia.org/wiki/Orangutan#:~:text=Dominant%20adult%20males%20develop%20distinctive%20cheek%20pads%20or%20flanges%20and%20make%20long%20calls%20that%20attract%20females%20and%20intimidate%20rivals%3B%20younger%20subordinate%20males%20do%20not%20and%20more%20resemble%20adult%20females"},
       {"name": "The Inifinte Conversation", "url": "https://infiniteconversation.com/"}
+    ],
+    "September 2023": [
+      {"name":  "The Artist and The Machine - Michael Nielsen", "url": "https://michaelnielsen.org/blog/the-artist-and-the-machine/"},
+      {"name":  "All Souls Exam Questions", "url":  "https://verbivoco.files.wordpress.com/2016/08/all-souls-general-exam-questions-2009-to-2014.pdf"}
     ]
   },
   "books": {
@@ -160,7 +164,10 @@
     ],
     "July 2023": [
       {"name": "Tomorrow and tomorrow and tomorrow by Gabrielle Zevin", "url": ""},
-      {"name": "Happyh Hour by Marlowe Granados", "url": ""}
+      {"name": "Happy Hour by Marlowe Granados", "url": ""}
+    ],
+    "August 2023": [
+      {"name": "Pachinko by Min Jin Lee", "url": ""}
     ],
     "GOAT": [
       {"name": "A Man Called Ove by Frederik Backman", "url": ""},
