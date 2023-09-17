@@ -13,22 +13,33 @@ things are captured better in other tongues. Here's some:
 
 - Feyli
   - _Dhivehi/ Maldives_
-  - The feeling of sand between your toes as waves recede 
-  on a beach
+  - The feeling of sand between your toes as waves ebb away.
 - Komorebi 
   - _Japanese_ 
-  - Sunlight which is filtered through the leaves of the trees.
-  In particular, it means the visible light rays
+  - The dappled sunlight that shines through tree leaves.
 - Sobremesa
   - _Spanish_
   - The time spent sitting around the table and chatting freely long after 
-  you've finished eating a meal.
+  you've finished eating a meal. It's not about the meal, but the connection aftewards.
 - Boketto
   - _Japanese_ 
   - Gazing vacantly into the distance without thinking.
 - Shemomedjamo
   - _Georgian_ 
   - Eating past the point of being full just because the food tastes so good.
+- Marek
+  - _Serbian_ 
+  - A feeling of blissful pleasure and contentment derived from enjoying simple, everyday moments.
+- Hygge 
+  - _Danish_
+  - A profound _coziness_ and contentment drawn from simple pleasures, often in shared moments; such as enjoying a warm 
+  drink with a friend by a fireplace.
+- Wabi-sabi
+  - _Japanese_
+  - Embracing the beauty in imperfection and transience; valuing the inherent significance and stories of everyday 
+  objects and moments.
+
+
 
 <!-- ---  -->
 <!-- 
