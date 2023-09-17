@@ -1,3 +1,7 @@
+---
+title: Countries
+---
+
 # Countries I have visited
 
 1. Ireland
@@ -15,3 +19,5 @@
 13. North America
 14. Greece
 15. Japan
+16. Australia
+17. Thailand
