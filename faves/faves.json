@@ -189,7 +189,9 @@
     ],
     "October 2023": [
       {"name": "Science Questions with Surprising Answers", "url": "https://www.wtamu.edu/~cbaird/sq/recent/"},
-      {"name": "Bleuje", "url": "https://bleuje.com/animationsite/"}
+      {"name": "Bleuje", "url": "https://bleuje.com/animationsite/"},
+      {"name": "Pretraining on the Test Set Is All You Need", "url": "https://arxiv.org/abs/2309.08632?ref=upstract.com"},
+      {"name": "ansonyo.me - luck", "url": "https://www.ansonyu.me/luck"}
     ]
   },
   "books": {
