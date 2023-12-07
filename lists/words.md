@@ -38,6 +38,10 @@ things are captured better in other tongues. Here's some:
   - _Japanese_
   - Embracing the beauty in imperfection and transience; valuing the inherent significance and stories of everyday 
   objects and moments.
+- Marmeladenglasmomente
+  - _German_
+  - Moments and memories so dear to you, so full of joy and meaning, that you wish you could capture them 
+  in a jar and keep them forever. 
 
 
 
