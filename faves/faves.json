@@ -1,8 +1,72 @@
 {
   "music": {
+    "December 2023": [
+      {
+        "name": "Suite from \"The Hours\" by Philip Glass",
+        "url": ""
+      },
+      {
+        "name": "Sevilla by Henrique Camacho",
+        "url": ""
+      },
+      {
+          "name": "Monaco by Bad Bunny",
+          "url": ""
+      },
+      {
+          "name": "1 Thing by Amerie",
+          "url": ""
+      },
+      {
+          "name": "Tourner Dans Le Vide by Indila",
+          "url": ""
+      },
+      {
+          "name": "One Of The Girls by The Weeknd",
+          "url": ""
+      },
+      {
+        "name": "My City's On Fire by Anyma",
+        "url": ""
+      }
+    ],
+    "November 2023": [
+      {
+        "name": "Rachmaninoff Piano Concerto No. 2",
+        "url": ""
+      },
+      {
+        "name": "The Thrill by Wiz Khalifa",
+        "url": ""
+      },
+      {
+        "name": "Carora by Alex O'Leary",
+        "url": ""
+      },
+      {
+        "name": "Harder We Fall by SOMMA",
+        "url": ""
+      },
+      {
+        "name": "What Was I Made For? by Billie Eillish",
+        "url": ""
+      }
+    ],
     "October 2023": [
       {
         "name": "Rhapsody on a Theme of Paganini by Rachmaninoff",
+        "url": ""
+      },
+      {
+        "name": "Swervin by A Boogie Wit Da Hoodie",
+        "url": ""
+      },
+      {
+        "name": "Swan LK243 by Catriona McKay",
+        "url": ""
+      },
+      {
+        "name": "Afternoon Waltz by Taku Matsushiba",
         "url": ""
       }
     ],
@@ -200,6 +264,9 @@
       {"name": "The Summer Day by Mary Oliver", "url": "https://wordsfortheyear.com/2015/06/21/the-summer-day-by-mary-oliver"},
       {"name": "Balenciaga Towel Skirt", "url": "https://www.balenciaga.com/en-us/balenciaga-towel-skirt-beige-768726TPP919501.html"},
       {"name": "Balenciaga Trash Bag", "url": "https://web.archive.org/web/20221019080429/https://www.balenciaga.com/en-us/trash-bag-large-pouch--black-811010641.html"}
+    ],
+    "Decemeber 2023": [
+      {"name": "Digital candle via a tiny volumetric display", "url": "https://mitxela.com/projects/candle"}
     ]
   },
   "books": {
@@ -216,6 +283,17 @@
     "September 2023": [
       {"name": "Pachinko by Min Jin Lee", "url": ""},
       {"name": "Cleopatra and Frankenstein", "url": ""}
+    ],
+    "October 2023": [
+      {"name": "Lie With Me by Philippe Besson", "url": ""},
+      {"name": "Everything I Know About Love by Dolly Alderton", "url": ""}
+    ],
+    "November 2023": [
+      {"name": "Elon Musk by Walter Isaacson", "url": ""},
+      {"name": "Yellowface by RF Kuang", "url": ""}
+    ],
+    "December 2023": [
+      {"name": "The Case Against The Sexual Revolution by Louise Perry", "url": ""}
     ],
     "GOAT": [
       {"name": "A Man Called Ove by Frederik Backman", "url": ""},
