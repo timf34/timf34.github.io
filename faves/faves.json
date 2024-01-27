@@ -1,5 +1,7 @@
 {
   "music": {
+    "January 2024": [
+    ],
     "December 2023": [
       {
         "name": "Suite from \"The Hours\" by Philip Glass",
@@ -236,7 +238,7 @@
       {"name": "Derek Sivers", "url": "https://sive.rs/blog"},
       {"name": "Tim Urban's life paths visualization", "url": "https://twitter.com/waitbutwhy/status/1367871165319049221?s=20"},
       {"name": "Do Not Love Half Lovers by Kahlil Gibran", "url": "https://www.goodreads.com/quotes/1213937-do-not-love-half-lovers-do-not-entertain-half-friends"}
-    ], 
+    ],
     "August 2023": [
       {"name": "Male orangutan physiology", "url": "https://en.wikipedia.org/wiki/Orangutan#:~:text=Dominant%20adult%20males%20develop%20distinctive%20cheek%20pads%20or%20flanges%20and%20make%20long%20calls%20that%20attract%20females%20and%20intimidate%20rivals%3B%20younger%20subordinate%20males%20do%20not%20and%20more%20resemble%20adult%20females"},
       {"name": "The Inifinte Conversation", "url": "https://infiniteconversation.com/"}
@@ -267,6 +269,9 @@
     ],
     "Decemeber 2023": [
       {"name": "Digital candle via a tiny volumetric display", "url": "https://mitxela.com/projects/candle"}
+    ],
+    "January 2024": [
+      {"name": "Tyler Hobbs", "url": "https://tylerxhobbs.com/"}
     ]
   },
   "books": {
@@ -294,6 +299,9 @@
     ],
     "December 2023": [
       {"name": "The Case Against The Sexual Revolution by Louise Perry", "url": ""}
+    ],
+    "January 2024": [
+      {"name":  "The Idiot by Elif Batuman"}
     ],
     "GOAT": [
       {"name": "A Man Called Ove by Frederik Backman", "url": ""},

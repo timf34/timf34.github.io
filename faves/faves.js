@@ -1,3 +1,6 @@
+// TODO: Note that faves.json will break if there isn't an entry with the current year. I.e. it broke on Jan 1 2024 before
+//  I had any 2024 entries
+
 // Constants
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const SEASONS = ["Winter", "Spring", "Summer", "Autumn"];
