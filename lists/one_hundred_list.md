@@ -27,12 +27,12 @@ Updated: 17-07-2023
 10. [x] Play football with the taoiseach
 11. [ ] Run a half marathon
 12. [ ] See the Northern Lights
-13. [ ] Vist the Neue Nationalgalerie in Berlin
+13. [x] Vist the Neue Nationalgalerie in Berlin
 14. [x] Smoke weed and enjoy Van Gogh in Amsterdam
 15. [ ] Drink vodka in Russia
 16. [x] Start a company
 17. [ ] Eat at a 3 michelin star restaurant
-18. [ ] See the Book of Mormon on Broadway or in the West End
+18. [x] See the Book of Mormon on Broadway or in the West End
 19. [ ] Go hiking in Canada 
 20. [x] Spend a weekend in a TikTok house for nerds in California
 21. [x] Cliff jump from Crow's Nest in Howth 
@@ -53,7 +53,7 @@ Updated: 17-07-2023
 36. [ ] Drive a convertible along the Italian Riviera
 37. [x] Eat Thai food in Thailand
 38. [x] Do research in Cambridge and/ or Oxford
-39. [ ] Scuba dive
+39. [x] Scuba dive
 40. [ ] Get drunk at the Pav
 41. [x] Have sex somewhere beautiful in nature
 42. [ ] Visit Petra
@@ -66,5 +66,5 @@ Updated: 17-07-2023
 49. [ ] Meditate in a temple in Vietnam
 50. [ ] Go to a traditional scandinavian sauna (if you don't get whacked with a birch branch, it doesn't count)
 51. [ ] Ask a girl out IRL
-52. [ ] Create a Python package and upload it to PyPi
+52. [x] Create a Python package and upload it to PyPi
 53. [ ] Launch something on product hunt
