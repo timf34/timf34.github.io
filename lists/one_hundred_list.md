@@ -21,7 +21,7 @@ Updated: 17-07-2023
 4. [x] Eat sushi in Japan
 5. [ ] Become a parent 
 6. [ ] Build a six pack
-7. [ ] Get my drivers license 
+7. [ ] Get my fake drivers license 
 8. [x] Storm the pitch at a Premier League final 
 9. [x] Go snorkelling in a desert
 10. [x] Play football with the taoiseach
