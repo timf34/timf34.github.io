@@ -39,7 +39,7 @@ Updated: 17-07-2023
 22. [x] Commit harmless idenity fraud in a foreign country
 23. [x] Volunteer on stage at a sex show in Amsterday
 24. [ ] Go to a warehouse techno rave
-25. [ ] Ask out a stranger 
+25. [x] Ask out a stranger 
 26. [ ] See a shooting star
 27. [ ] Publish an app or chrome extension to the Play, Chrome Web or App Store
 28. [x] Own my personal domain
@@ -65,6 +65,6 @@ Updated: 17-07-2023
 48. [ ] Have a threesome
 49. [ ] Meditate in a temple in Vietnam
 50. [ ] Go to a traditional scandinavian sauna (if you don't get whacked with a birch branch, it doesn't count)
-51. [ ] Ask a girl out IRL
+51. [x] Ask a girl out IRL
 52. [x] Create a Python package and upload it to PyPi
 53. [ ] Launch something on product hunt
