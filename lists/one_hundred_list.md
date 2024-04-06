@@ -21,25 +21,25 @@ Updated: 17-07-2023
 4. [x] Eat sushi in Japan
 5. [ ] Become a parent 
 6. [ ] Build a six pack
-7. [ ] Get my drivers license 
+7. [ ] Get my fake drivers license 
 8. [x] Storm the pitch at a Premier League final 
 9. [x] Go snorkelling in a desert
 10. [x] Play football with the taoiseach
 11. [ ] Run a half marathon
 12. [ ] See the Northern Lights
-13. [ ] Vist the Neue Nationalgalerie in Berlin
+13. [x] Vist the Neue Nationalgalerie in Berlin
 14. [x] Smoke weed and enjoy Van Gogh in Amsterdam
 15. [ ] Drink vodka in Russia
 16. [x] Start a company
 17. [ ] Eat at a 3 michelin star restaurant
-18. [ ] See the Book of Mormon on Broadway or in the West End
+18. [x] See the Book of Mormon on Broadway or in the West End
 19. [ ] Go hiking in Canada 
 20. [x] Spend a weekend in a TikTok house for nerds in California
 21. [x] Cliff jump from Crow's Nest in Howth 
 22. [x] Commit harmless idenity fraud in a foreign country
 23. [x] Volunteer on stage at a sex show in Amsterday
 24. [ ] Go to a warehouse techno rave
-25. [ ] Ask out a stranger 
+25. [x] Ask out a stranger 
 26. [ ] See a shooting star
 27. [ ] Publish an app or chrome extension to the Play, Chrome Web or App Store
 28. [x] Own my personal domain
@@ -53,7 +53,7 @@ Updated: 17-07-2023
 36. [ ] Drive a convertible along the Italian Riviera
 37. [x] Eat Thai food in Thailand
 38. [x] Do research in Cambridge and/ or Oxford
-39. [ ] Scuba dive
+39. [x] Scuba dive
 40. [ ] Get drunk at the Pav
 41. [x] Have sex somewhere beautiful in nature
 42. [ ] Visit Petra
@@ -65,6 +65,6 @@ Updated: 17-07-2023
 48. [ ] Have a threesome
 49. [ ] Meditate in a temple in Vietnam
 50. [ ] Go to a traditional scandinavian sauna (if you don't get whacked with a birch branch, it doesn't count)
-51. [ ] Ask a girl out IRL
-52. [ ] Create a Python package and upload it to PyPi
+51. [x] Ask a girl out IRL
+52. [x] Create a Python package and upload it to PyPi
 53. [ ] Launch something on product hunt
