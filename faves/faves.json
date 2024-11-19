@@ -1,7 +1,5 @@
 {
   "music": {
-    "January 2024": [
-    ],
     "December 2023": [
       {
         "name": "Suite from \"The Hours\" by Philip Glass",
@@ -277,6 +275,12 @@
     ],
     "February 2024": [
       {"name": "Advice to Young People from Jason", "url": "https://jxnl.github.io/blog/writing/2024/06/01/advice-to-young-people/"}
+    ],
+    "November 2024": [
+      {"name": "IMG_0001 by Riley Walz", "url": "https://walzr.com/IMG_0001"},
+      {"name": "Bop Spotter by Riley Walz", "url": "https://walzr.com/bop-spotter"},
+      {"name": "Passport Photos by Max Siedentopf", "url": "https://maxsiedentopf.com/passport-photos/"},
+      {"Wall mounted diffusion mirror", "url": "https://www.matthieulc.com/posts/pablonet/"}
     ]
   },
   "books": {
