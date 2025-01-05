@@ -15,13 +15,31 @@ function getSeasonFromDate(date) {
 }
 
 function getMostRecentMonth(data, currentMonthIndex, currentYear) {
+    // First try current year
     for (let i = currentMonthIndex; i >= 0; i--) {
         const monthName = MONTH_NAMES[i];
         if (data[`${monthName} ${currentYear}`]) {
             return `${monthName} ${currentYear}`;
         }
     }
-    return `${DEFAULT_MONTH} ${currentYear}`;
+    
+    // If no entries found in current year, try previous year with all months
+    const previousYear = currentYear - 1;
+    for (let i = 11; i >= 0; i--) {
+        const monthName = MONTH_NAMES[i];
+        if (data[`${monthName} ${previousYear}`]) {
+            return `${monthName} ${previousYear}`;
+        }
+    }
+    
+    // If still nothing found, return the most recent entry from any year
+    const entries = Object.keys(data).filter(key => key !== "GOAT");  // Exclude GOAT category
+    if (entries.length > 0) {
+        // Sort entries by year and month to get the most recent
+        return entries.sort().reverse()[0];
+    }
+    
+    return `${DEFAULT_MONTH} ${previousYear}`;  // Last resort fallback
 }
 
 function capitalizeFirstLetter(string) {
@@ -36,6 +54,11 @@ async function initializeData() {
 
 // Initial Display
 function setInitialDisplayData(data, currentMonthIndex, currentYear, currentSeason) {
+    // console.log('Initial data:', data);
+    // console.log('Current month index:', currentMonthIndex);
+    // console.log('Current year:', currentYear);
+    // console.log('Current season:', currentSeason);
+    
     let musicMonthToDisplay = getMostRecentMonth(data["music"], currentMonthIndex, currentYear);
     updateList("music", musicMonthToDisplay, data);
     let seasonToDisplay = data["movies"][`${currentSeason} ${currentYear}`] ? `${currentSeason} ${currentYear}` : `Spring 2023`;
@@ -134,6 +157,10 @@ function removeExistingMenu() {
 }
 
 function updateList(category, periodYear, data) {
+    console.log('Updating list for:', category, periodYear);
+    console.log('Data structure:', data[category]);
+    console.log('Specific period data:', data[category][periodYear]);
+    
     let list = document.getElementById(category + "List");
     list.innerHTML = "";
 
