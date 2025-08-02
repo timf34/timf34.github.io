@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>$title$</title>
+    <title>Museums &amp; Exhibitions</title>
     <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css" />
     <link rel="stylesheet" href="../styles/styles.css" />
@@ -32,9 +32,10 @@
 
 <body>
     <div>
-        <h1>Museums &amp; Exhibitions</h1>
-        <p><i>This is a running list of major museums and galleries I’ve visited. An asterisk (*) marks the museums or exhibitions that really blew me away.</i></p>
-
+        <h1>Art Museums &amp; Exhibitions</h1>
+        <p><i>This is a running list of major museums, galleries, and their exhibitions, I’ve visited. An asterisk (*) marks the museums or
+                exhibitions that really blew me away.</i></p>
+        <p id="museum-count"><i></i></p>
 
         <h3>Australia</h3>
         <ul>
@@ -355,6 +356,18 @@
             <li>Okayama Prefectural Museum of Art, Okayama</li>
         </ul>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Select all top-level <ul> elements under each <h3>
+            const topLevelMuseums = document.querySelectorAll("h3 + ul > li");
+            const count = topLevelMuseums.length;
+
+            // Update the paragraph with the count
+            document.getElementById("museum-count").innerHTML =
+                `<i>Art museums visited so far: ${count}</i>`;
+        });
+    </script>
+
 </body>
 
 </html>
