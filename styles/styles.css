@@ -45,13 +45,13 @@ button, button:enabled:hover, button:enabled:focus, button:enabled:active {
     color: rgb(190, 190, 190);
 }
 
-.light-mode a {
+a {
     color: rgb(0, 0, 0);
     text-decoration: underline;
     text-decoration-color: rgb(249, 145, 255, 0.8);
 }
 
-.light-mode a:hover {
+a:hover {
     color: rgba(0, 0, 0, 0.7);
 }
 
@@ -63,4 +63,4 @@ button, button:enabled:hover, button:enabled:focus, button:enabled:active {
 
 .dark-mode a:hover {
     color: rgba(255, 255, 255, 0.85);
-}
+}   
