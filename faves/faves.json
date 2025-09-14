@@ -284,7 +284,11 @@
     ],
     "April 2025": [
       {"name": "Nabeel's Principles", "url": "https://nabeelqu.substack.com/p/principles?utm_campaign=posts-open-in-app&triedRedirect=true"},
-      {"name": "Ezekiel Aquino's personal website, maybe my favourite of all time", "url": "https://ezekielaquino.com/"}
+      {"name": "Ezekiel Aquino's personal website, maybe my favourite of all time", "url": "https://ezekielaquino.com/"},
+      {"name":  "Everything is Fertile - Nick Cammarata", "url": "http://nickcammarata.com/writing/everything-is-fertile"}
+    ],
+    "September 2025": [
+      {"name": "There is way too much serendipity", "url": "https://www.lesswrong.com/posts/oA23zoEjPnzqfHiCt/there-is-way-too-much-serendipity"}
     ]
   },
   "books": {
