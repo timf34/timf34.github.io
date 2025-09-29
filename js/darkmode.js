@@ -1,5 +1,10 @@
 // Keeping this block of code outside of event listeners to ensure that the theme is set on page load (no white flashes!)
-const currentMode = localStorage.getItem('mode');
+// Check for saved preference first, then system preference
+const savedMode = localStorage.getItem('mode');
+const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+const currentMode = savedMode || (systemPrefersDark ? 'dark-mode' : 'light-mode');
+
 if (currentMode) {
     document.documentElement.classList.add(currentMode);
 }
