@@ -24,5 +24,5 @@ title: Countries
 18. Portugal
 19. Germany 
 20. China 
-21. Finland
+21. Norway
 22. Sweden
