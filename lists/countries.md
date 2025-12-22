@@ -21,3 +21,5 @@ title: Countries
 15. Japan
 16. Australia
 17. Thailand
+18. Portugal
+19. Germany 
